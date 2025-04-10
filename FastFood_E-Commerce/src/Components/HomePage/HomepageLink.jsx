@@ -2,16 +2,18 @@ const HomePageLink = () => {
   return (
     <>
       <div>
-        <div>
-          <div>
-            <h3>
-              Ordina,Paga in App
-              <br />e Ritira
-              <br /> al Ristorante.
-            </h3>
-            <p>Da oggi basta con un click!</p>
+        <div className="row">
+          <div className="col-6">
+            <div className="container">
+              <h3 className="h1 fw-bold">
+                Ordina,Paga in App
+                <br />e Ritira
+                <br /> al Ristorante.
+              </h3>
+              <p className="h5">Da oggi basta con un click!</p>
+            </div>
           </div>
-          <div>
+          <div className="col-6">
             <h3>
               Scopri anche
               <br />
@@ -22,8 +24,8 @@ const HomePageLink = () => {
             <p>Offerte colazione,pranzo e cena</p>
           </div>
         </div>
-        <div>
-          <div>
+        <div className="row">
+          <div className="col-6">
             <h3>
               Tutta
               <br /> la nostra qualità
@@ -33,7 +35,7 @@ const HomePageLink = () => {
               <br /> e i nostri partner lavorano con cura per maggiore qualità
             </p>
           </div>
-          <div>
+          <div className="col-6">
             <h3>
               Vuoi far parte <br />
               del nostro Team?
