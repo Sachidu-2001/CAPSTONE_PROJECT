@@ -12,9 +12,9 @@ const NavBarComponent = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Link
-                to="/home"
+                to="/"
                 className={
-                  location.pathname === "/home" ? "nav-link active" : "nav-link"
+                  location.pathname === "/" ? "nav-link active" : "nav-link"
                 }
               >
                 Home
@@ -25,7 +25,15 @@ const NavBarComponent = () => {
               <Link className="nav-link" to={"/novità"}>
                 Novità
               </Link>
-              <Link className="nav-link" to={"/lavora-con-noi"}>
+              <Link
+                className={
+                  location.pathname === "/lavora-con-noi"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                s
+                to="/lavora-con-noi"
+              >
                 Lavora con noi
               </Link>
             </Nav>
