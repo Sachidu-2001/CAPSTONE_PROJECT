@@ -10,3 +10,10 @@
     background-image: url(../src/assets/img/lavoraconnoiBackGround.webp);
     ;
 }
+
+
+/*footer*/
+
+.footerBack {
+    background-color: orangered;
+}

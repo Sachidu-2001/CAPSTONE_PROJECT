@@ -9,13 +9,16 @@ const LavCarousel = () => {
       </div>
       <div>
         <div className="container">
-          <h3>UNISCITI AL NOSTRO TEAM</h3>
-          <p>
+          <h2>UNISCITI AL NOSTRO TEAM</h2>
+          <p className="h4">
             Lavorare da Mcdonald's significa unirsi a un team dinamico e
-            stimolante. Ogni giorno ci dedichiamo alla preparazione delle
-            migliori specialità di Pollo con cura e passione, sin dal 1952. Vuoi
-            essere dei nostri? Scopri le posizioni aperte o invia una
-            candidatura spontanea… Ti aspettiamo!
+            stimolante.
+            <br /> Ogni giorno ci dedichiamo alla preparazione <br />
+            delle migliori specialità di Pollo con cura e passione, sin dal
+            1952.
+            <br /> Vuoi essere dei nostri?
+            <br /> Scopri le posizioni aperte o invia una candidatura spontanea…
+            Ti aspettiamo!
           </p>
         </div>
       </div>
