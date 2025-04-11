@@ -22,7 +22,14 @@ const NavBarComponent = () => {
               <Link className="nav-link" to={"/i-nostri-prodotti"}>
                 I nostri prodotti
               </Link>
-              <Link className="nav-link" to={"/novità"}>
+              <Link
+                to="/novita"
+                className={
+                  location.pathname === "/novita"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
                 Novità
               </Link>
               <Link

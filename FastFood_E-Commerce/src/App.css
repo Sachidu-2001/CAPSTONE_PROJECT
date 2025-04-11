@@ -3,3 +3,10 @@
 /*body {
     font-family: 'Roboto', sans-serif
 }
+
+/*Lavora con noi*/
+
+.LavoraBack {
+    background-image: url(../src/assets/img/lavoraconnoiBackGround.webp);
+    ;
+}

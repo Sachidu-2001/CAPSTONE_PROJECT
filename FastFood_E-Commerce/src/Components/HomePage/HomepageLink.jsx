@@ -1,6 +1,8 @@
+import { Container } from "react-bootstrap";
+
 const HomePageLink = () => {
   return (
-    <>
+    <Container>
       <div>
         <div className="row">
           <div className="col-6">
@@ -47,7 +49,7 @@ const HomePageLink = () => {
         </div>
       </div>
       <div></div>
-    </>
+    </Container>
   );
 };
 

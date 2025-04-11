@@ -7,7 +7,7 @@ const FooterComponent = () => {
         <div className="d-flex justify-content-center fs-1">
           <h6 className="fw-bold h4">Seguici su</h6>
           <Icon.Instagram />
-          <Icon.Facebook />
+          <Icon.Facebook /
           <Icon.TwitterX />
           <Icon.Youtube />
         </div>

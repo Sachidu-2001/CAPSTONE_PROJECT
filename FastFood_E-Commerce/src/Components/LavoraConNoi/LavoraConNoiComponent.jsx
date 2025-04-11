@@ -1,3 +1,5 @@
+import LavCarousel from "./LavCarousel";
+
 const LavoraConNoiComponent = () => {
   return (
     <>
