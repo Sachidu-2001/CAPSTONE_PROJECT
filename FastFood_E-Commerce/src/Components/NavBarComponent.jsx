@@ -1,8 +1,15 @@
-import { Container, Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
+import { Container, Navbar, Nav, Button, Modal, Form } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const NavBarComponent = () => {
   const Location = useLocation();
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -51,9 +58,61 @@ const NavBarComponent = () => {
                 Lavora con noi
               </Link>
             </Nav>
-            <Button variant="primary" id="btnLogin">
-              LOGIN
+            {/* modal button */}
+            <Button
+              type="button"
+              className="text-white backgroundRed border border-rounded"
+              onClick={handleShow}
+            >
+              ACCEDI PER ORDINARE
             </Button>
+            {/* Modal*/}
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Accedi</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Form>
+                  <Form.Group>
+                    <Form.Label>Nome</Form.Label>
+                    <Form.Control
+                      type="name"
+                      placeholder="Fabio"
+                    ></Form.Control>
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>Cognome</Form.Label>
+                    <Form.Control
+                      type="surname"
+                      placeholder="Rossi"
+                    ></Form.Control>
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control
+                      type="email"
+                      placeholder="name@example.com"
+                      autoFocus
+                    />
+                  </Form.Group>
+                  <Form.Group>
+                    <Form.Label>PassWord</Form.Label>
+                    <Form.Control
+                      type="password"
+                      placeholder="password"
+                    ></Form.Control>
+                  </Form.Group>
+                </Form>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleClose}>
+                  Save Changes
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </Navbar.Collapse>
         </Container>
       </Navbar>
