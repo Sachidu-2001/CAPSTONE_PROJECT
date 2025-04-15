@@ -81,8 +81,8 @@ const ProductsList = () => {
             }
           >
             Salse
+            <img src={Prdt6} style={{ width: "30em", height: "20em" }}></img>
           </Link>
-          <img src={Prdt6} style={{ width: "30em", height: "20em" }}></img>
         </div>
       </div>
     </Container>

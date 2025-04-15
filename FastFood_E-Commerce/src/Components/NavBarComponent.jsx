@@ -7,8 +7,55 @@ const NavBarComponent = () => {
 
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false);
+    setEmail("");
+    setName("");
+    setSurname("");
+    setPassword("");
+  };
   const handleShow = () => setShow(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    localStorage.getItem("isLoggedin") === "true"
+  );
+
+  const [userName, setUserName] = useState(
+    localStorage.getItem("userName" || "")
+  );
+
+  const [userSurName, setUserSurname] = useState(
+    localStorage.getItem("userSurname" || "")
+  );
+
+  //login
+  const handleLogin = () => {
+    if (email && password && name && surname) {
+      localStorage.setItem("isLoggedIn");
+      localStorage.setItem("userName", name);
+      localStorage.setItem("userSurname", surname);
+      setIsLoggedIn(true);
+      setUserName(name);
+      setUserSurname(surname);
+      handleClose();
+    } else {
+      alert("Completa tutti i campi");
+    }
+  };
+
+  //logout
+  const handleLogout = () => {
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("userName");
+    localStorage.removeItem("userSurname");
+    setIsLoggedIn(false);
+    setUserName(name);
+    setUserSurname(surname);
+  };
 
   return (
     <>
@@ -59,13 +106,17 @@ const NavBarComponent = () => {
               </Link>
             </Nav>
             {/* modal button */}
-            <Button
-              type="button"
-              className="text-white backgroundRed border border-rounded"
-              onClick={handleShow}
-            >
-              ACCEDI PER ORDINARE
-            </Button>
+            {isLoggedIn ? (
+              <Button onClick={handleLogout}>Logout</Button>
+            ) : (
+              <Button
+                type="button"
+                className="text-white backgroundRed border border-rounded"
+                onClick={handleShow}
+              >
+                ACCEDI PER ORDINARE
+              </Button>
+            )}
             {/* Modal*/}
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
@@ -78,6 +129,8 @@ const NavBarComponent = () => {
                     <Form.Control
                       type="name"
                       placeholder="Fabio"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     ></Form.Control>
                   </Form.Group>
                   <Form.Group>
@@ -85,21 +138,26 @@ const NavBarComponent = () => {
                     <Form.Control
                       type="surname"
                       placeholder="Rossi"
+                      value={surname}
+                      onChange={(e) => setSurname(e.target.value)}
                     ></Form.Control>
                   </Form.Group>
                   <Form.Group>
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label>Email</Form.Label>
                     <Form.Control
                       type="email"
                       placeholder="name@example.com"
-                      autoFocus
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </Form.Group>
                   <Form.Group>
-                    <Form.Label>PassWord</Form.Label>
+                    <Form.Label>Password</Form.Label>
                     <Form.Control
                       type="password"
                       placeholder="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     ></Form.Control>
                   </Form.Group>
                 </Form>
@@ -108,7 +166,7 @@ const NavBarComponent = () => {
                 <Button variant="secondary" onClick={handleClose}>
                   Close
                 </Button>
-                <Button variant="primary" onClick={handleClose}>
+                <Button variant="primary" onClick={handleLogin}>
                   Save Changes
                 </Button>
               </Modal.Footer>
