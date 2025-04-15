@@ -35,7 +35,7 @@ const NavBarComponent = () => {
   //login
   const handleLogin = () => {
     if (email && password && name && surname) {
-      localStorage.setItem("isLoggedIn");
+      localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("userName", name);
       localStorage.setItem("userSurname", surname);
       setIsLoggedIn(true);
@@ -107,7 +107,12 @@ const NavBarComponent = () => {
             </Nav>
             {/* modal button */}
             {isLoggedIn ? (
-              <Button onClick={handleLogout}>Logout</Button>
+              <>
+                <span className="me-3">
+                  Ciao,{userName} {userSurName}
+                </span>
+                <Button onClick={handleLogout}>Esci</Button>
+              </>
             ) : (
               <Button
                 type="button"
