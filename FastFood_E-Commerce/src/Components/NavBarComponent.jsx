@@ -1,4 +1,12 @@
-import { Container, Navbar, Nav, Button, Modal, Form } from "react-bootstrap";
+import {
+  Container,
+  Navbar,
+  Nav,
+  Button,
+  Modal,
+  Form,
+  Offcanvas,
+} from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
@@ -125,11 +133,24 @@ const NavBarComponent = () => {
               </Button>
             )}
 
-          {isLoggedIn ? (
-            <>
-            
-            </>
-          )}
+            {isLoggedIn ? (
+              <>
+                <Button variant="primary" onClick={handleShow} className="me-2">
+                  {name}
+                </Button>
+                <Offcanvas show={show} onHide={handleClose} {...props}>
+                  <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body>
+                    Some text as placeholder. In real life you can have the
+                    elements you have chosen. Like, text, images, lists, etc.
+                  </Offcanvas.Body>
+                </Offcanvas>
+              </>
+            ) : (
+              <></>
+            )}
             {/* Modal*/}
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
