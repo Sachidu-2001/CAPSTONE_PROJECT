@@ -61,14 +61,16 @@ const NavBarComponent = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">FastFoodApp</Navbar.Brand>
+          <Navbar.Brand href="#">FastFoodApp</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Link
                 to="/"
                 className={
-                  location.pathname === "/" ? "nav-link active" : "nav-link"
+                  location.pathname === "/"
+                    ? "nav-link active fw-bold"
+                    : "nav-link"
                 }
               >
                 Home
@@ -77,7 +79,7 @@ const NavBarComponent = () => {
                 to="/i-nostri-prodotti"
                 className={
                   location.pathname === "/i-nostri-prodotti"
-                    ? "nav-link active"
+                    ? "nav-link active fw-bold"
                     : "nav-link"
                 }
               >
@@ -87,7 +89,7 @@ const NavBarComponent = () => {
                 to="/novita"
                 className={
                   location.pathname === "/novita"
-                    ? "nav-link active"
+                    ? "nav-link active fw-bold"
                     : "nav-link"
                 }
               >
@@ -96,7 +98,7 @@ const NavBarComponent = () => {
               <Link
                 className={
                   location.pathname === "/lavora-con-noi"
-                    ? "nav-link active"
+                    ? "nav-link active fw-bold"
                     : "nav-link"
                 }
                 s
@@ -122,6 +124,12 @@ const NavBarComponent = () => {
                 ACCEDI PER ORDINARE
               </Button>
             )}
+
+          {isLoggedIn ? (
+            <>
+            
+            </>
+          )}
             {/* Modal*/}
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
