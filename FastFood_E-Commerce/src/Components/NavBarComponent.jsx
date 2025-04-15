@@ -27,15 +27,12 @@ const NavBarComponent = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
-
   const [isLoggedIn, setIsLoggedIn] = useState(
     localStorage.getItem("isLoggedin") === "true"
   );
-
   const [userName, setUserName] = useState(
     localStorage.getItem("userName" || "")
   );
-
   const [userSurName, setUserSurname] = useState(
     localStorage.getItem("userSurname" || "")
   );
@@ -64,6 +61,11 @@ const NavBarComponent = () => {
     setUserName(name);
     setUserSurname(surname);
   };
+
+  //Carrello
+  const [Showcanvas, setShowcanvas] = useState(false);
+  const handleShowcanvas = () => setShowcanvas(true);
+  const handleClosecanvas = () => setShowcanvas(false);
 
   return (
     <>
@@ -135,10 +137,18 @@ const NavBarComponent = () => {
 
             {isLoggedIn ? (
               <>
-                <Button variant="primary" onClick={handleShow} className="me-2">
-                  {name}
+                <Button
+                  variant="primary"
+                  onClick={handleShowcanvas}
+                  className="me-2"
+                >
+                  Carrello
                 </Button>
-                <Offcanvas show={show} onHide={handleClose} {...props}>
+                <Offcanvas
+                  show={Showcanvas}
+                  onHide={handleClosecanvas}
+                  placement="end"
+                >
                   <Offcanvas.Header closeButton>
                     <Offcanvas.Title>Offcanvas</Offcanvas.Title>
                   </Offcanvas.Header>
