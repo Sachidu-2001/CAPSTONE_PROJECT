@@ -7,13 +7,14 @@ import {
   Form,
   Offcanvas,
 } from "react-bootstrap";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import * as Icon from "react-bootstrap-icons";
 import prova1 from "../assets/img/Product1.jpg";
 
 const NavBarComponent = () => {
-  const Location = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const [show, setShow] = useState(false);
 
@@ -49,6 +50,7 @@ const NavBarComponent = () => {
       setUserName(name);
       setUserSurname(surname);
       handleClose();
+      navigate("/orders");
     } else {
       alert("Completa tutti i campi");
     }
@@ -60,8 +62,6 @@ const NavBarComponent = () => {
     localStorage.removeItem("userName");
     localStorage.removeItem("userSurname");
     setIsLoggedIn(false);
-    setUserName(name);
-    setUserSurname(surname);
   };
 
   //Carrello
@@ -76,54 +76,58 @@ const NavBarComponent = () => {
           <Navbar.Brand href="#">FastFoodApp</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Link
-                to="/"
-                className={
-                  location.pathname === "/"
-                    ? "nav-link active fw-bold"
-                    : "nav-link"
-                }
-              >
-                Home
-              </Link>
-              <Link
-                to="/i-nostri-prodotti"
-                className={
-                  location.pathname === "/i-nostri-prodotti"
-                    ? "nav-link active fw-bold"
-                    : "nav-link"
-                }
-              >
-                I nostri prodotti
-              </Link>
-              <Link
-                to="/novita"
-                className={
-                  location.pathname === "/novita"
-                    ? "nav-link active fw-bold"
-                    : "nav-link"
-                }
-              >
-                Novità
-              </Link>
-              <Link
-                className={
-                  location.pathname === "/lavora-con-noi"
-                    ? "nav-link active fw-bold"
-                    : "nav-link"
-                }
-                s
-                to="/lavora-con-noi"
-              >
-                Lavora con noi
-              </Link>
-            </Nav>
+            {isLoggedIn ? (
+              <></>
+            ) : (
+              <Nav className="me-auto">
+                <Link
+                  to="/"
+                  className={
+                    location.pathname === "/"
+                      ? "nav-link active fw-bold"
+                      : "nav-link"
+                  }
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/i-nostri-prodotti"
+                  className={
+                    location.pathname === "/i-nostri-prodotti"
+                      ? "nav-link active fw-bold"
+                      : "nav-link"
+                  }
+                >
+                  I nostri prodotti
+                </Link>
+                <Link
+                  to="/novita"
+                  className={
+                    location.pathname === "/novita"
+                      ? "nav-link active fw-bold"
+                      : "nav-link"
+                  }
+                >
+                  Novità
+                </Link>
+                <Link
+                  className={
+                    location.pathname === "/lavora-con-noi"
+                      ? "nav-link active fw-bold"
+                      : "nav-link"
+                  }
+                  s
+                  to="/lavora-con-noi"
+                >
+                  Lavora con noi
+                </Link>
+              </Nav>
+            )}
             {/* modal button */}
             {isLoggedIn ? (
               <>
                 <span className="me-3">
-                  Ciao,{userName} {userSurName}
+                  Benvenuto,{userName} {userSurName}
                 </span>
                 <Button onClick={handleLogout}>Esci</Button>
               </>
@@ -142,7 +146,7 @@ const NavBarComponent = () => {
                 <Icon.Cart
                   variant="primary"
                   onClick={handleShowcanvas}
-                  className="me-2"
+                  className="ms-5"
                 />
                 <Offcanvas
                   show={Showcanvas}

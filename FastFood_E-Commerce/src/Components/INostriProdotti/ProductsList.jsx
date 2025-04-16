@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Prdt1 from "../../assets/img/Product1.jpg";
 import Prdt2 from "../../assets/img/Product2.png";
 import Prdt3 from "../../assets/img/Product3.png";
@@ -8,6 +8,7 @@ import Prdt5 from "../../assets/img/Product5.jpg";
 import Prdt6 from "../../assets/img/Product6.jpg";
 
 const ProductsList = () => {
+  const location = useLocation();
   return (
     <Container>
       <div>
@@ -16,9 +17,11 @@ const ProductsList = () => {
       <div className="d-flex justify-content-between">
         <div>
           <Link
-            to="/menu"
+            to="menu"
             className={
-              location.pathname === "/menu" ? "nav-link active" : "nav-link"
+              location.pathname.includes("menu")
+                ? "nav-link active"
+                : "nav-link"
             }
           >
             Menu
