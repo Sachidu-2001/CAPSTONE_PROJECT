@@ -9,6 +9,8 @@ import {
 } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import * as Icon from "react-bootstrap-icons";
+import prova1 from "../assets/img/Product1.jpg";
 
 const NavBarComponent = () => {
   const Location = useLocation();
@@ -137,24 +139,27 @@ const NavBarComponent = () => {
 
             {isLoggedIn ? (
               <>
-                <Button
+                <Icon.Cart
                   variant="primary"
                   onClick={handleShowcanvas}
                   className="me-2"
-                >
-                  Carrello
-                </Button>
+                />
                 <Offcanvas
                   show={Showcanvas}
                   onHide={handleClosecanvas}
                   placement="end"
                 >
                   <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                    <Offcanvas.Title>Totale provvisorio</Offcanvas.Title>
                   </Offcanvas.Header>
                   <Offcanvas.Body>
-                    Some text as placeholder. In real life you can have the
-                    elements you have chosen. Like, text, images, lists, etc.
+                    <div className="d-flex">
+                      <img src={prova1} style={{ width: "8em" }} />
+                      <div>
+                        <p>Nome Prodotto</p>
+                        <p>6</p>
+                      </div>
+                    </div>
                   </Offcanvas.Body>
                 </Offcanvas>
               </>
