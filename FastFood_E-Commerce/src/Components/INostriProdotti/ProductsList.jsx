@@ -30,9 +30,11 @@ const ProductsList = () => {
         </div>
         <div>
           <Link
-            to="/panini"
+            to="panini"
             className={
-              location.pathname === "/panini" ? "nav-link active" : "nav-link"
+              location.pathname.includes("panini")
+                ? "nav-link active"
+                : "nav-link"
             }
           >
             Panini
@@ -43,9 +45,11 @@ const ProductsList = () => {
       <div className="d-flex justify-content-between ">
         <div>
           <Link
-            to="/bevande"
+            to="bevande"
             className={
-              location.pathname === "/bevande" ? "nav-link active" : "nav-link"
+              location.pathname.includes("bevande")
+                ? "nav-link active"
+                : "nav-link"
             }
           >
             Bevande
@@ -54,9 +58,11 @@ const ProductsList = () => {
         </div>
         <div>
           <Link
-            to="/gelati"
+            to="gelati"
             className={
-              location.pathname === "/gelati" ? "nav-link active" : "nav-link"
+              location.pathname.includes("gelati")
+                ? "nav-link active"
+                : "nav-link"
             }
           >
             Gelati e Dessert
@@ -67,9 +73,11 @@ const ProductsList = () => {
       <div className="d-flex justify-content-between">
         <div>
           <Link
-            to="/patatine"
+            to="patatine"
             className={
-              location.pathname === "/patatine" ? "nav-link active" : "nav-link"
+              location.pathname.includes("patatine")
+                ? "nav-link active"
+                : "nav-link"
             }
           >
             Patatine
@@ -78,9 +86,11 @@ const ProductsList = () => {
         </div>
         <div>
           <Link
-            to="/salse"
+            to="salse"
             className={
-              location.pathname === "/salse" ? "nav-link active" : "nav-link"
+              location.pathname.includes("salse")
+                ? "nav-link active"
+                : "nav-link"
             }
           >
             Salse

@@ -75,79 +75,25 @@ const NavBarComponent = () => {
         <Container>
           <Navbar.Brand href="#">FastFoodApp</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="d-flex justify-content-end"
+          >
             {isLoggedIn ? (
-              <></>
-            ) : (
-              <Nav className="me-auto">
-                <Link
-                  to="/"
-                  className={
-                    location.pathname === "/"
-                      ? "nav-link active fw-bold"
-                      : "nav-link"
-                  }
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/i-nostri-prodotti"
-                  className={
-                    location.pathname === "/i-nostri-prodotti"
-                      ? "nav-link active fw-bold"
-                      : "nav-link"
-                  }
-                >
-                  I nostri prodotti
-                </Link>
-                <Link
-                  to="/novita"
-                  className={
-                    location.pathname === "/novita"
-                      ? "nav-link active fw-bold"
-                      : "nav-link"
-                  }
-                >
-                  Novità
-                </Link>
-                <Link
-                  className={
-                    location.pathname === "/lavora-con-noi"
-                      ? "nav-link active fw-bold"
-                      : "nav-link"
-                  }
-                  s
-                  to="/lavora-con-noi"
-                >
-                  Lavora con noi
-                </Link>
-              </Nav>
-            )}
-            {/* modal button */}
-            {isLoggedIn ? (
-              <>
-                <span className="me-3">
+              <div className="d-flex">
+                <span className="me-3 my-auto">
                   Benvenuto,{userName} {userSurName}
                 </span>
                 <Button onClick={handleLogout}>Esci</Button>
-              </>
-            ) : (
-              <Button
-                type="button"
-                className="text-white backgroundRed border border-rounded"
-                onClick={handleShow}
-              >
-                ACCEDI PER ORDINARE
-              </Button>
-            )}
 
-            {isLoggedIn ? (
-              <>
-                <Icon.Cart
-                  variant="primary"
-                  onClick={handleShowcanvas}
-                  className="ms-5"
-                />
+                <div>
+                  <Icon.Cart
+                    variant="primary"
+                    onClick={handleShowcanvas}
+                    className="ms-5 mt-2 fs-4"
+                  />
+                </div>
+
                 <Offcanvas
                   show={Showcanvas}
                   onHide={handleClosecanvas}
@@ -166,10 +112,63 @@ const NavBarComponent = () => {
                     </div>
                   </Offcanvas.Body>
                 </Offcanvas>
-              </>
+              </div>
             ) : (
-              <></>
+              <>
+                <Nav className="me-auto">
+                  <Link
+                    to="/"
+                    className={
+                      location.pathname === "/"
+                        ? "nav-link active fw-bold"
+                        : "nav-link"
+                    }
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    to="/i-nostri-prodotti"
+                    className={
+                      location.pathname === "/i-nostri-prodotti"
+                        ? "nav-link active fw-bold"
+                        : "nav-link"
+                    }
+                  >
+                    I nostri prodotti
+                  </Link>
+                  <Link
+                    to="/novita"
+                    className={
+                      location.pathname === "/novita"
+                        ? "nav-link active fw-bold"
+                        : "nav-link"
+                    }
+                  >
+                    Novità
+                  </Link>
+                  <Link
+                    className={
+                      location.pathname === "/lavora-con-noi"
+                        ? "nav-link active fw-bold"
+                        : "nav-link"
+                    }
+                    s
+                    to="/lavora-con-noi"
+                  >
+                    Lavora con noi
+                  </Link>
+                </Nav>
+
+                <Button
+                  type="button"
+                  className="text-white backgroundRed border border-rounded"
+                  onClick={handleShow}
+                >
+                  ACCEDI PER ORDINARE
+                </Button>
+              </>
             )}
+
             {/* Modal*/}
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
