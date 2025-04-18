@@ -74,7 +74,6 @@ const NavBarComponent = () => {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#">FastFoodApp</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse
             id="basic-navbar-nav"
             className="d-flex justify-content-end"
@@ -115,7 +114,7 @@ const NavBarComponent = () => {
               </div>
             ) : (
               <>
-                <Nav className="me-auto">
+                <Nav className="me-auto d-flex">
                   <Link
                     to="/"
                     className={
