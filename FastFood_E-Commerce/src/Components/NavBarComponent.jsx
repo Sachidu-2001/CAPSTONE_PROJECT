@@ -70,161 +70,156 @@ const NavBarComponent = () => {
   const handleClosecanvas = () => setShowcanvas(false);
 
   return (
-    <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Collapse
-            id="basic-navbar-nav"
-            className="d-flex justify-content-end"
-          >
-            {isLoggedIn ? (
-              <div className="d-flex">
-                <span className="me-3 my-auto">
-                  Benvenuto,{userName} {userSurName}
-                </span>
-                <Button onClick={handleLogout}>Esci</Button>
+    <Navbar className="bg-white">
+      <Container>
+        <div>
+          {isLoggedIn ? (
+            <div className="d-flex">
+              <span className="me-3 my-auto">
+                Benvenuto,{userName} {userSurName}
+              </span>
+              <Button onClick={handleLogout}>Esci</Button>
 
-                <div>
-                  <Icon.Cart
-                    variant="primary"
-                    onClick={handleShowcanvas}
-                    className="ms-5 mt-2 fs-4"
-                  />
-                </div>
-
-                <Offcanvas
-                  show={Showcanvas}
-                  onHide={handleClosecanvas}
-                  placement="end"
-                >
-                  <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Totale provvisorio</Offcanvas.Title>
-                  </Offcanvas.Header>
-                  <Offcanvas.Body>
-                    <div className="d-flex">
-                      <img src={prova1} style={{ width: "8em" }} />
-                      <div>
-                        <p>Nome Prodotto</p>
-                        <p>6</p>
-                      </div>
-                    </div>
-                  </Offcanvas.Body>
-                </Offcanvas>
+              <div>
+                <Icon.Cart
+                  variant="primary"
+                  onClick={handleShowcanvas}
+                  className="ms-5 mt-2 fs-4"
+                />
               </div>
-            ) : (
-              <>
-                <Nav className="me-auto d-flex">
-                  <Link
-                    to="/"
-                    className={
-                      location.pathname === "/"
-                        ? "nav-link active fw-bold"
-                        : "nav-link"
-                    }
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to="/i-nostri-prodotti"
-                    className={
-                      location.pathname === "/i-nostri-prodotti"
-                        ? "nav-link active fw-bold"
-                        : "nav-link"
-                    }
-                  >
-                    I nostri prodotti
-                  </Link>
-                  <Link
-                    to="/novita"
-                    className={
-                      location.pathname === "/novita"
-                        ? "nav-link active fw-bold"
-                        : "nav-link"
-                    }
-                  >
-                    Novità
-                  </Link>
-                  <Link
-                    className={
-                      location.pathname === "/lavora-con-noi"
-                        ? "nav-link active fw-bold"
-                        : "nav-link"
-                    }
-                    s
-                    to="/lavora-con-noi"
-                  >
-                    Lavora con noi
-                  </Link>
-                </Nav>
 
-                <Button
-                  type="button"
-                  className="text-white backgroundRed border border-rounded"
-                  onClick={handleShow}
+              <Offcanvas
+                show={Showcanvas}
+                onHide={handleClosecanvas}
+                placement="end"
+              >
+                <Offcanvas.Header closeButton>
+                  <Offcanvas.Title>Totale provvisorio</Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                  <div className="d-flex">
+                    <img src={prova1} style={{ width: "8em" }} />
+                    <div>
+                      <p>Nome Prodotto</p>
+                      <p>6</p>
+                    </div>
+                  </div>
+                </Offcanvas.Body>
+              </Offcanvas>
+            </div>
+          ) : (
+            <div className="d-flex">
+              <Nav>
+                <Link
+                  to="/"
+                  className={
+                    location.pathname === "/"
+                      ? "nav-link active fw-bold"
+                      : "nav-link"
+                  }
                 >
-                  ACCEDI PER ORDINARE
-                </Button>
-              </>
-            )}
+                  Home
+                </Link>
+                <Link
+                  to="/i-nostri-prodotti"
+                  className={
+                    location.pathname === "/i-nostri-prodotti"
+                      ? "nav-link active fw-bold"
+                      : "nav-link"
+                  }
+                >
+                  I nostri prodotti
+                </Link>
+                <Link
+                  to="/novita"
+                  className={
+                    location.pathname === "/novita"
+                      ? "nav-link active fw-bold"
+                      : "nav-link"
+                  }
+                >
+                  Novità
+                </Link>
+                <Link
+                  className={
+                    location.pathname === "/lavora-con-noi"
+                      ? "nav-link active fw-bold"
+                      : "nav-link"
+                  }
+                  s
+                  to="/lavora-con-noi"
+                >
+                  Lavora con noi
+                </Link>
+              </Nav>
 
-            {/* Modal*/}
-            <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>Accedi</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <Form>
-                  <Form.Group>
-                    <Form.Label>Nome</Form.Label>
-                    <Form.Control
-                      type="name"
-                      placeholder="Fabio"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                    ></Form.Control>
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Label>Cognome</Form.Label>
-                    <Form.Control
-                      type="surname"
-                      placeholder="Rossi"
-                      value={surname}
-                      onChange={(e) => setSurname(e.target.value)}
-                    ></Form.Control>
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control
-                      type="email"
-                      placeholder="name@example.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </Form.Group>
-                  <Form.Group>
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    ></Form.Control>
-                  </Form.Group>
-                </Form>
-              </Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                  Close
-                </Button>
-                <Button variant="primary" onClick={handleLogin}>
-                  Save Changes
-                </Button>
-              </Modal.Footer>
-            </Modal>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+              <Button
+                type="button"
+                className="text-white backgroundRed border border-rounded"
+                onClick={handleShow}
+              >
+                ACCEDI PER ORDINARE
+              </Button>
+            </div>
+          )}
+
+          {/* Modal*/}
+          <Modal show={show} onHide={handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Accedi</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form>
+                <Form.Group>
+                  <Form.Label>Nome</Form.Label>
+                  <Form.Control
+                    type="name"
+                    placeholder="Fabio"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  ></Form.Control>
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label>Cognome</Form.Label>
+                  <Form.Control
+                    type="surname"
+                    placeholder="Rossi"
+                    value={surname}
+                    onChange={(e) => setSurname(e.target.value)}
+                  ></Form.Control>
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="name@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </Form.Group>
+                <Form.Group>
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control
+                    type="password"
+                    placeholder="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></Form.Control>
+                </Form.Group>
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={handleClose}>
+                Close
+              </Button>
+              <Button variant="primary" onClick={handleLogin}>
+                Save Changes
+              </Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
+      </Container>
+    </Navbar>
   );
 };
 
