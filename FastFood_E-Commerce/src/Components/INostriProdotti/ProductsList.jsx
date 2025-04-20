@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import Prdt1 from "../../assets/img/Product1.jpg";
 import Prdt2 from "../../assets/img/Product2.png";
@@ -14,8 +14,8 @@ const ProductsList = () => {
       <div>
         <h2>I Nostri Prodotti</h2>
       </div>
-      <div className="d-flex justify-content-between">
-        <div>
+      <Row>
+        <Col md={6}>
           <Link
             to="menu"
             className={
@@ -27,8 +27,8 @@ const ProductsList = () => {
             Menu
           </Link>
           <img src={Prdt1} style={{ width: "30em", height: "20em" }}></img>
-        </div>
-        <div>
+        </Col>
+        <Col md={6}>
           <Link
             to="panini"
             className={
@@ -40,10 +40,10 @@ const ProductsList = () => {
             Panini
           </Link>
           <img src={Prdt2} style={{ width: "30em", height: "20em" }}></img>
-        </div>
-      </div>
-      <div className="d-flex justify-content-between ">
-        <div>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={6}>
           <Link
             to="bevande"
             className={
@@ -55,8 +55,8 @@ const ProductsList = () => {
             Bevande
           </Link>
           <img src={Prdt3} style={{ width: "30em", height: "20em" }}></img>
-        </div>
-        <div>
+        </Col>
+        <Col md={6}>
           <Link
             to="gelati"
             className={
@@ -68,10 +68,10 @@ const ProductsList = () => {
             Gelati e Dessert
           </Link>
           <img src={Prdt4} style={{ width: "30em", height: "20em" }}></img>
-        </div>
-      </div>
-      <div className="d-flex justify-content-between">
-        <div>
+        </Col>
+      </Row>
+      <Row className="d-flex justify-content-between">
+        <Col md={6}>
           <Link
             to="patatine"
             className={
@@ -83,8 +83,8 @@ const ProductsList = () => {
             Patatine
           </Link>
           <img src={Prdt5} style={{ width: "30em", height: "20em" }}></img>
-        </div>
-        <div>
+        </Col>
+        <Col md={6}>
           <Link
             to="salse"
             className={
@@ -96,8 +96,8 @@ const ProductsList = () => {
             Salse
             <img src={Prdt6} style={{ width: "30em", height: "20em" }}></img>
           </Link>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </Container>
   );
 };
