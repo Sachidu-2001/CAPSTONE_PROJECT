@@ -73,7 +73,6 @@ const NavBarComponent = () => {
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#">FastFoodApp</Navbar.Brand>
           <Navbar.Collapse
             id="basic-navbar-nav"
             className="d-flex justify-content-end"

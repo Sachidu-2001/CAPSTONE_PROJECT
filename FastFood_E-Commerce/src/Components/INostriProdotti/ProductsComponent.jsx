@@ -1,5 +1,5 @@
 import ProductsList from "./ProductsList";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const ProductsComponent = () => {
   return (
