@@ -10,7 +10,7 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import * as Icon from "react-bootstrap-icons";
-import prova1 from "../assets/img/Product1.jpg";
+import prova1 from "../assets/img/Product1.png";
 
 const NavBarComponent = () => {
   const location = useLocation();
@@ -128,7 +128,7 @@ const NavBarComponent = () => {
                       : "nav-link"
                   }
                 >
-                  I nostri prodotti
+                  Prodotti
                 </Link>
                 <Link
                   to="/novita"

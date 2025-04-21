@@ -4,8 +4,10 @@ import { Outlet, useLocation } from "react-router-dom";
 const ProductsComponent = () => {
   return (
     <>
-      <ProductsList />
-      <Outlet />
+      <div className="d-flex d-md-block">
+        <ProductsList />
+        <Outlet />
+      </div>
     </>
   );
 };

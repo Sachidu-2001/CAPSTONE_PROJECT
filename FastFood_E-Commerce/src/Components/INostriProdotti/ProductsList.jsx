@@ -1,11 +1,11 @@
 import { Container, Col, Row } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import Prdt1 from "../../assets/img/Product1.jpg";
+import Prdt1 from "../../assets/img/Product1.png";
 import Prdt2 from "../../assets/img/Product2.png";
 import Prdt3 from "../../assets/img/Product3.png";
-import Prdt4 from "../../assets/img/Product4.jpg";
-import Prdt5 from "../../assets/img/Product5.jpg";
-import Prdt6 from "../../assets/img/Product6.jpg";
+import Prdt4 from "../../assets/img/Product4.png";
+import Prdt5 from "../../assets/img/Product5.png";
+import Prdt6 from "../../assets/img/Product6.png";
 
 const ProductsList = () => {
   const location = useLocation();
@@ -15,7 +15,7 @@ const ProductsList = () => {
         <h2>I Nostri Prodotti</h2>
       </div>
       <Row>
-        <Col md={6}>
+        <Col xs={12} md={2}>
           <Link
             to="menu"
             className={
@@ -25,10 +25,10 @@ const ProductsList = () => {
             }
           >
             Menu
+            <img src={Prdt2} style={{ width: "5rem" }}></img>
           </Link>
-          <img src={Prdt1} style={{ width: "30em", height: "20em" }}></img>
         </Col>
-        <Col md={6}>
+        <Col xs={12} md={2}>
           <Link
             to="panini"
             className={
@@ -38,12 +38,11 @@ const ProductsList = () => {
             }
           >
             Panini
+            <img src={Prdt1} style={{ width: "5rem" }}></img>
           </Link>
-          <img src={Prdt2} style={{ width: "30em", height: "20em" }}></img>
         </Col>
-      </Row>
-      <Row>
-        <Col md={6}>
+
+        <Col sm={2}>
           <Link
             to="bevande"
             className={
@@ -53,10 +52,10 @@ const ProductsList = () => {
             }
           >
             Bevande
+            <img src={Prdt3} style={{ width: "5rem" }}></img>
           </Link>
-          <img src={Prdt3} style={{ width: "30em", height: "20em" }}></img>
         </Col>
-        <Col md={6}>
+        <Col xs={12} md={2}>
           <Link
             to="gelati"
             className={
@@ -66,12 +65,11 @@ const ProductsList = () => {
             }
           >
             Gelati e Dessert
+            <img src={Prdt4} style={{ width: "5rem" }}></img>
           </Link>
-          <img src={Prdt4} style={{ width: "30em", height: "20em" }}></img>
         </Col>
-      </Row>
-      <Row className="d-flex justify-content-between">
-        <Col md={6}>
+
+        <Col xs={12} md={2}>
           <Link
             to="patatine"
             className={
@@ -81,10 +79,10 @@ const ProductsList = () => {
             }
           >
             Patatine
+            <img src={Prdt5} style={{ width: "5rem" }}></img>
           </Link>
-          <img src={Prdt5} style={{ width: "30em", height: "20em" }}></img>
         </Col>
-        <Col md={6}>
+        <Col xs={12} md={2}>
           <Link
             to="salse"
             className={
@@ -94,7 +92,7 @@ const ProductsList = () => {
             }
           >
             Salse
-            <img src={Prdt6} style={{ width: "30em", height: "20em" }}></img>
+            <img src={Prdt6} style={{ width: "5rem" }}></img>
           </Link>
         </Col>
       </Row>

@@ -7,7 +7,7 @@ import LavoraConNoiComponent from "./Components/LavoraConNoi/LavoraConNoiCompone
 import "./App.css";
 import NovitaComponent from "./Components/Novità/NovitaComponent";
 import ProductsComponent from "./Components/INostriProdotti/ProductsComponent";
-import OrderComponent from "./Components/HomePage/Order/OrderComponent";
+import OrderComponent from "./Components/Order/OrderComponent";
 import ProductMenu from "./Components/INostriProdotti/Products/ProductMenu";
 import ProductPatatine from "./Components/INostriProdotti/Products/ProductPatatine";
 import ProductBevande from "./Components/INostriProdotti/Products/ProductBevande";
