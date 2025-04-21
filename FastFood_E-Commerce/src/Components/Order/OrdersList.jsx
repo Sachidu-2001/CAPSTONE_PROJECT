@@ -36,8 +36,7 @@ const OrderList = () => {
                 <Card.Body>
                   <Card.Title>{prt.name}</Card.Title>
                   <Card.Text>{prt.Price}</Card.Text>
-                  <Card.Text>{prt.description}</Card.Text>
-                  <Button variant="primary">Vedi Dettagli</Button>
+                  <Button variant="primary">Aggiungi</Button>
                 </Card.Body>
               </Card>
             </Col>
