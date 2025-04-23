@@ -2,10 +2,15 @@ import { useState } from "react";
 import { Container, Card, Button, Col, Row } from "react-bootstrap";
 
 const OrderList = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState({
+    panini: [],
+    bevande: [],
+    patate: [],
+  });
+  const [category, setCategory] = useState("panini");
 
   //fetch Get
-  const url = `https://67ff7a6258f18d7209f15e53.mockapi.io/Products`;
+  const url = `https://mocki.io/v1/bfe60262-c3a1-43ce-9a55-027e9693cc2f`;
 
   const fetchingProducts = async () => {
     try {
@@ -23,19 +28,19 @@ const OrderList = () => {
   return (
     <Container>
       <div className="d-flex justify-content-around">
-        <h3>Panini</h3>
-        <h3>Patate</h3>
-        <h3>Bevande</h3>
+        <h3 onClick={() => setCategory("panini")}>Panini</h3>
+        <h3 onClick={() => setCategory("patate")}>Patate</h3>
+        <h3 onClick={() => setCategory("bevande")}>Bevande</h3>
       </div>
       <div>
         <Row>
-          {products.map((prt, index) => (
+          {products[category].map((prt, index) => (
             <Col lg={3}>
               <Card style={{ width: "18rem" }} key={index}>
                 <Card.Img variant="top" src={prt.image} />
                 <Card.Body>
                   <Card.Title>{prt.name}</Card.Title>
-                  <Card.Text>{prt.Price}</Card.Text>
+                  <Card.Text>{prt.price}</Card.Text>
                   <Button variant="primary">Aggiungi</Button>
                 </Card.Body>
               </Card>
