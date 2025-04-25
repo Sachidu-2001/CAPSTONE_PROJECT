@@ -11,6 +11,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import * as Icon from "react-bootstrap-icons";
 import prova1 from "../assets/img/Product1.png";
+import { useCart } from "./CartComponent";
 
 const NavBarComponent = () => {
   const location = useLocation();
@@ -68,6 +69,7 @@ const NavBarComponent = () => {
   const [Showcanvas, setShowcanvas] = useState(false);
   const handleShowcanvas = () => setShowcanvas(true);
   const handleClosecanvas = () => setShowcanvas(false);
+  const { cartProducts } = useCart();
 
   return (
     <Navbar className="bg-white">
@@ -97,13 +99,19 @@ const NavBarComponent = () => {
                   <Offcanvas.Title>Totale provvisorio</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                  <div className="d-flex">
-                    <img src={prova1} style={{ width: "8em" }} />
-                    <div>
-                      <p>Nome Prodotto</p>
-                      <p>6</p>
-                    </div>
-                  </div>
+                  {cartProducts.length === 0 ? (
+                    <p>che Tristezza... Il Tuo Carrello è vuoto</p>
+                  ) : (
+                    cartProducts.map((e, i) => (
+                      <div key={i}>
+                        <img src={e.image} />
+                        <div>
+                          <p>{e.name}</p>
+                          <p>{e.price}</p>
+                        </div>
+                      </div>
+                    ))
+                  )}
                 </Offcanvas.Body>
               </Offcanvas>
             </div>

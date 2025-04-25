@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Card, Button, Col, Row } from "react-bootstrap";
+import { useCart } from "../CartComponent";
 
 const OrderList = () => {
   const [products, setProducts] = useState({
@@ -8,6 +9,7 @@ const OrderList = () => {
     patate: [],
   });
   const [category, setCategory] = useState("panini");
+  const { addToCart } = useCart();
 
   //fetch Get
   const url = `https://mocki.io/v1/bfe60262-c3a1-43ce-9a55-027e9693cc2f`;
@@ -41,7 +43,9 @@ const OrderList = () => {
                 <Card.Body>
                   <Card.Title>{prt.name}</Card.Title>
                   <Card.Text>{prt.price} &euro;</Card.Text>
-                  <Button variant="primary">Aggiungi</Button>
+                  <Button variant="primary" onClick={() => addToCart(prt)}>
+                    Aggiungi
+                  </Button>
                 </Card.Body>
               </Card>
             </Col>
