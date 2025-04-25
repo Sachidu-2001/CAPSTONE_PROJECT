@@ -11,8 +11,6 @@ const CartComponent = ({ children }) => {
     setCartProducts((prev) => [...prev, product]);
   };
 
-  const removeFromCart
-
   return (
     <CartContext.Provider value={{ cartProducts, addToCart }}>
       {children}
