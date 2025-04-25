@@ -40,7 +40,7 @@ const OrderList = () => {
                 <Card.Img variant="top" src={prt.image} />
                 <Card.Body>
                   <Card.Title>{prt.name}</Card.Title>
-                  <Card.Text>{prt.price}</Card.Text>
+                  <Card.Text>{prt.price} &euro;</Card.Text>
                   <Button variant="primary">Aggiungi</Button>
                 </Card.Body>
               </Card>

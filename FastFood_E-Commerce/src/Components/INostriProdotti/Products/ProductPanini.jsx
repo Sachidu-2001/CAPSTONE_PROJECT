@@ -54,7 +54,10 @@ const ProductPanini = () => {
         </Modal.Header>
         <Modal.Body className="d-flex">
           <img src={selectPrt?.image} />
-          <p>{selectPrt?.description}</p>
+          <div>
+            <p>{selectPrt?.description}</p>
+            <p className="fs-1">{selectPrt?.price} &euro;</p>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>

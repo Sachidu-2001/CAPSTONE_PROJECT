@@ -76,7 +76,7 @@ const NavBarComponent = () => {
           {isLoggedIn ? (
             <div className="d-flex">
               <span className="me-3 my-auto">
-                Benvenuto,{userName} {userSurName}
+                Benvenuto, {userName} {userSurName}
               </span>
               <Button onClick={handleLogout}>Esci</Button>
 
