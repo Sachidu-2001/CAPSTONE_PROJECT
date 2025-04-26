@@ -6,6 +6,7 @@ import {
   Modal,
   Form,
   Offcanvas,
+  Card,
 } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -70,6 +71,9 @@ const NavBarComponent = () => {
   const handleShowcanvas = () => setShowcanvas(true);
   const handleClosecanvas = () => setShowcanvas(false);
   const { cartProducts } = useCart();
+  const { removeFromCart } = useCart();
+  //totaleCarrello
+  const totalPrice = cartProducts.reduce((acc, curr) => acc + curr.price, 0);
 
   return (
     <Navbar className="bg-white">
@@ -96,20 +100,30 @@ const NavBarComponent = () => {
                 placement="end"
               >
                 <Offcanvas.Header closeButton>
-                  <Offcanvas.Title>Totale provvisorio</Offcanvas.Title>
+                  <Offcanvas.Title>
+                    Totale provvisorio: {totalPrice.toFixed(2)} &euro;
+                  </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   {cartProducts.length === 0 ? (
                     <p>che Tristezza... Il Tuo Carrello è vuoto</p>
                   ) : (
                     cartProducts.map((e, i) => (
-                      <div key={i}>
-                        <img src={e.image} />
-                        <div>
-                          <p>{e.name}</p>
-                          <p>{e.price}</p>
+                      <Card className="mb-1">
+                        <div key={i} className="d-flex">
+                          <img src={e.image} style={{ width: "10em" }} />
+                          <div>
+                            <p className="h5">{e.name}</p>
+                            <p className="fw-bold h4">{e.price}</p>
+                            <Button
+                              variant="danger"
+                              onClick={() => removeFromCart(e)}
+                            >
+                              Rimuovi
+                            </Button>
+                          </div>
                         </div>
-                      </div>
+                      </Card>
                     ))
                   )}
                 </Offcanvas.Body>

@@ -11,8 +11,14 @@ const CartComponent = ({ children }) => {
     setCartProducts((prev) => [...prev, product]);
   };
 
+  const removeFromCart = (removeProduct) => {
+    setCartProducts((prev) =>
+      prev.filter((product) => product !== removeProduct)
+    );
+  };
+
   return (
-    <CartContext.Provider value={{ cartProducts, addToCart }}>
+    <CartContext.Provider value={{ cartProducts, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
