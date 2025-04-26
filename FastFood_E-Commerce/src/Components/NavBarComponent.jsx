@@ -11,7 +11,6 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import * as Icon from "react-bootstrap-icons";
-import prova1 from "../assets/img/Product1.png";
 import { useCart } from "./CartComponent";
 
 const NavBarComponent = () => {
@@ -102,6 +101,9 @@ const NavBarComponent = () => {
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title>
                     Totale provvisorio: {totalPrice.toFixed(2)} &euro;
+                    <Button className="rounded-pill btn-warning">
+                      Procedi all'ordine
+                    </Button>
                   </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
@@ -115,12 +117,7 @@ const NavBarComponent = () => {
                           <div>
                             <p className="h5">{e.name}</p>
                             <p className="fw-bold h4">{e.price}</p>
-                            <Button
-                              variant="danger"
-                              onClick={() => removeFromCart(e)}
-                            >
-                              Rimuovi
-                            </Button>
+                            <Icon.Trash onClick={() => removeFromCart(e)} />
                           </div>
                         </div>
                       </Card>
