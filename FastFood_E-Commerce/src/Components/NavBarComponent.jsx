@@ -74,6 +74,15 @@ const NavBarComponent = () => {
   //totaleCarrello
   const totalPrice = cartProducts.reduce((acc, curr) => acc + curr.price, 0);
 
+  //Vai a checkout
+  const checkOut = () => {
+    if (cartProducts.length === 0) {
+      alert("il carrello è vuoto");
+    } else {
+      navigate("/checkout");
+    }
+  };
+
   return (
     <Navbar className="bg-white">
       <Container>
@@ -101,7 +110,13 @@ const NavBarComponent = () => {
                 <Offcanvas.Header closeButton>
                   <Offcanvas.Title>
                     Totale provvisorio: {totalPrice.toFixed(2)} &euro;
-                    <Button className="rounded-pill btn-warning">
+                    <Button
+                      className="rounded-pill btn-warning"
+                      onClick={() => {
+                        checkOut();
+                        handleClosecanvas();
+                      }}
+                    >
                       Procedi all'ordine
                     </Button>
                   </Offcanvas.Title>
