@@ -128,6 +128,7 @@ const CheckOutComponent = () => {
       </div>
     </Container>
   );
+  x;
 };
 
 export default CheckOutComponent;
