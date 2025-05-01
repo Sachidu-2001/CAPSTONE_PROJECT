@@ -1,11 +1,21 @@
 import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const HomePageLink = () => {
+  const navigate = useNavigate();
+
+  const workPage = () => {
+    navigate("/lavora-con-noi");
+  };
+
+  const upPage = () => {
+    navigate("/");
+  };
   return (
     <Container>
       <div>
         <div className="row">
-          <div className="col-6">
+          <div className="col-6" onClick={upPage}>
             <div>
               <h3 className="h1 fw-bold">
                 Ordina,Paga in App
@@ -37,7 +47,7 @@ const HomePageLink = () => {
               <br /> e i nostri partner lavorano con cura per maggiore qualità
             </p>
           </div>
-          <div className="col-6">
+          <div className="col-6" onClick={workPage}>
             <h3 className="h1 fw-bold">
               Vuoi far parte <br />
               del nostro Team?

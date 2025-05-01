@@ -15,6 +15,7 @@ import ProductPanini from "./Components/INostriProdotti/Products/ProductPanini";
 import ProductGelati from "./Components/INostriProdotti/Products/ProductGelati";
 import ProductSalse from "./Components/INostriProdotti/Products/ProductSalse";
 import CheckOutComponent from "./Components/Checkout/CheckOutComponent";
+import NotFoundComponent from "./Components/NotFound/NotFoundComponent";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             </Route>
             <Route path="/orders" element={<OrderComponent />} />
             <Route path="/checkout" element={<CheckOutComponent />}></Route>
+            <Route path="*" element={<NotFoundComponent />} />
           </Routes>
           <FooterComponent />
         </div>

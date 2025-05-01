@@ -12,6 +12,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { useCart } from "./CartComponent";
+import logo1 from "../assets/img/logo/logoapp.png";
 
 const NavBarComponent = () => {
   const location = useLocation();
@@ -63,6 +64,7 @@ const NavBarComponent = () => {
     localStorage.removeItem("userName");
     localStorage.removeItem("userSurname");
     setIsLoggedIn(false);
+    navigate("/");
   };
 
   //Carrello
@@ -85,174 +87,175 @@ const NavBarComponent = () => {
 
   return (
     <Navbar className="bg-white">
-      <Container>
-        <div>
-          {isLoggedIn ? (
-            <div className="d-flex">
+      <div className="container d-flex justify-content-between">
+        <Navbar.Brand className="p-0 m-0">
+          <img src={logo1} alt="logo" style={{ width: "4rem" }} />
+        </Navbar.Brand>
+        {isLoggedIn ? (
+          <>
+            <div>
               <span className="me-3 my-auto">
                 Benvenuto, {userName} {userSurName}
               </span>
               <Button onClick={handleLogout}>Esci</Button>
+            </div>
+            <div>
+              <Icon.Cart
+                variant="primary"
+                onClick={handleShowcanvas}
+                className="ms-5 mt-2 fs-4"
+              />
+            </div>
 
-              <div>
-                <Icon.Cart
-                  variant="primary"
-                  onClick={handleShowcanvas}
-                  className="ms-5 mt-2 fs-4"
-                />
-              </div>
-
-              <Offcanvas
-                show={Showcanvas}
-                onHide={handleClosecanvas}
-                placement="end"
-              >
-                <Offcanvas.Header closeButton>
-                  <Offcanvas.Title>
-                    Totale provvisorio: {totalPrice.toFixed(2)} &euro;
-                    <Button
-                      className="rounded-pill btn-warning"
-                      onClick={() => {
-                        checkOut();
-                        handleClosecanvas();
-                      }}
-                    >
-                      Procedi all'ordine
-                    </Button>
-                  </Offcanvas.Title>
-                </Offcanvas.Header>
-                <Offcanvas.Body>
-                  {cartProducts.length === 0 ? (
-                    <p>che Tristezza... Il Tuo Carrello è vuoto</p>
-                  ) : (
-                    cartProducts.map((e, i) => (
-                      <Card className="mb-1">
-                        <div key={i} className="d-flex">
-                          <img src={e.image} style={{ width: "10em" }} />
-                          <div>
-                            <p className="h5">{e.name}</p>
-                            <p className="fw-bold h4">{e.price}</p>
-                            <Icon.Trash onClick={() => removeFromCart(e)} />
-                          </div>
+            <Offcanvas
+              show={Showcanvas}
+              onHide={handleClosecanvas}
+              placement="end"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>
+                  Totale provvisorio: {totalPrice.toFixed(2)} &euro;
+                  <Button
+                    className="rounded-pill btn-warning"
+                    onClick={() => {
+                      checkOut();
+                      handleClosecanvas();
+                    }}
+                  >
+                    Procedi all'ordine
+                  </Button>
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                {cartProducts.length === 0 ? (
+                  <p>che Tristezza... Il Tuo Carrello è vuoto</p>
+                ) : (
+                  cartProducts.map((e, i) => (
+                    <Card className="mb-1">
+                      <div key={i} className="d-flex">
+                        <img src={e.image} style={{ width: "10em" }} />
+                        <div>
+                          <p className="h5">{e.name}</p>
+                          <p className="fw-bold h4">{e.price}</p>
+                          <Icon.Trash onClick={() => removeFromCart(e)} />
                         </div>
-                      </Card>
-                    ))
-                  )}
-                </Offcanvas.Body>
-              </Offcanvas>
-            </div>
-          ) : (
-            <div className="d-flex">
-              <Nav>
-                <Link
-                  to="/"
-                  className={
-                    location.pathname === "/"
-                      ? "nav-link active fw-bold"
-                      : "nav-link"
-                  }
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/i-nostri-prodotti"
-                  className={
-                    location.pathname === "/i-nostri-prodotti"
-                      ? "nav-link active fw-bold"
-                      : "nav-link"
-                  }
-                >
-                  Prodotti
-                </Link>
-                <Link
-                  to="/novita"
-                  className={
-                    location.pathname === "/novita"
-                      ? "nav-link active fw-bold"
-                      : "nav-link"
-                  }
-                >
-                  Novità
-                </Link>
-                <Link
-                  className={
-                    location.pathname === "/lavora-con-noi"
-                      ? "nav-link active fw-bold"
-                      : "nav-link"
-                  }
-                  s
-                  to="/lavora-con-noi"
-                >
-                  Lavora con noi
-                </Link>
-              </Nav>
-
-              <Button
-                type="button"
-                className="text-white backgroundRed border border-rounded"
-                onClick={handleShow}
+                      </div>
+                    </Card>
+                  ))
+                )}
+              </Offcanvas.Body>
+            </Offcanvas>
+          </>
+        ) : (
+          <>
+            <Nav>
+              <Link
+                to="/"
+                className={
+                  location.pathname === "/"
+                    ? "nav-link active fw-bold "
+                    : "nav-link "
+                }
               >
-                ACCEDI PER ORDINARE
-              </Button>
-            </div>
-          )}
+                HOME
+              </Link>
+              <Link
+                to="/i-nostri-prodotti"
+                className={
+                  location.pathname === "/i-nostri-prodotti"
+                    ? "nav-link active fw-bold"
+                    : "nav-link"
+                }
+              >
+                PRODOTTI
+              </Link>
+              <Link
+                to="/novita"
+                className={
+                  location.pathname === "/novita"
+                    ? "nav-link active fw-bold"
+                    : "nav-link"
+                }
+              >
+                NOVITÀ
+              </Link>
+              <Link
+                className={
+                  location.pathname === "/lavora-con-noi"
+                    ? "nav-link active fw-bold"
+                    : "nav-link"
+                }
+                s
+                to="/lavora-con-noi"
+              >
+                LAVORA CON NOI
+              </Link>
+            </Nav>
 
-          {/* Modal*/}
-          <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Accedi</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <Form>
-                <Form.Group>
-                  <Form.Label>Nome</Form.Label>
-                  <Form.Control
-                    type="name"
-                    placeholder="Fabio"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  ></Form.Control>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Cognome</Form.Label>
-                  <Form.Control
-                    type="surname"
-                    placeholder="Rossi"
-                    value={surname}
-                    onChange={(e) => setSurname(e.target.value)}
-                  ></Form.Control>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    placeholder="name@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    placeholder="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  ></Form.Control>
-                </Form.Group>
-              </Form>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-              <Button variant="primary" onClick={handleLogin}>
-                Save Changes
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </div>
-      </Container>
+            <Button
+              type="button"
+              className="text-white backgroundRed border border-rounded"
+              onClick={handleShow}
+            >
+              ACCEDI PER ORDINARE
+            </Button>
+          </>
+        )}
+      </div>
+      {/* Modal*/}
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Accedi</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group>
+              <Form.Label>Nome</Form.Label>
+              <Form.Control
+                type="name"
+                placeholder="Fabio"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Cognome</Form.Label>
+              <Form.Control
+                type="surname"
+                placeholder="Rossi"
+                value={surname}
+                onChange={(e) => setSurname(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="name@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleLogin}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Navbar>
   );
 };
