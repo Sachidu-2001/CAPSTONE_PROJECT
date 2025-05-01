@@ -32,10 +32,10 @@ const ProductPanini = () => {
   return (
     <Container>
       <h2>Panini</h2>
-      <Row>
+      <Row className="gy-4">
         {products.panini.map((prt, index) => (
           <Col lg={3}>
-            <Card style={{ width: "18rem" }} key={index}>
+            <Card style={{ width: "18rem" }} key={index} className="p-0 m-1">
               <Card.Img variant="top" src={prt.image} />
               <Card.Body>
                 <Card.Title>{prt.name}</Card.Title>

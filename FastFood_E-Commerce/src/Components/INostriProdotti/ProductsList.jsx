@@ -64,7 +64,7 @@ const ProductsList = () => {
                 : "nav-link"
             }
           >
-            Gelati e Dessert
+            Gelati
             <img src={Prdt4} style={{ width: "5rem" }}></img>
           </Link>
         </Col>
