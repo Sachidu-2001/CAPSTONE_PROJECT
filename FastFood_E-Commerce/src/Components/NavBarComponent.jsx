@@ -249,10 +249,10 @@ const NavBarComponent = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Chiudi
           </Button>
           <Button variant="primary" onClick={handleLogin}>
-            Save Changes
+            Accedi
           </Button>
         </Modal.Footer>
       </Modal>

@@ -1,5 +1,7 @@
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import HomeLink1 from "../../assets/img/phoneimg.webp";
+import HomeLink4 from "../../assets/img/falloutlogo.png";
 
 const HomePageLink = () => {
   const navigate = useNavigate();
@@ -23,7 +25,10 @@ const HomePageLink = () => {
     <Container>
       <div>
         <div className="row">
-          <div className="col-6" onClick={upPage}>
+          <div
+            className="col-6 d-flex justify-content-between"
+            onClick={upPage}
+          >
             <div>
               <h3 className="h1 fw-bold">
                 Ordina,Paga in App
@@ -32,6 +37,7 @@ const HomePageLink = () => {
               </h3>
               <p className="h5">Da oggi basta con un click!</p>
             </div>
+            <img src={HomeLink1} alt="likImg1" style={{ height: "180px" }} />
           </div>
           <div className="col-6" onClick={novitaPage}>
             <h3 className="h1 fw-bold">
@@ -55,14 +61,20 @@ const HomePageLink = () => {
               <br /> e i nostri partner lavorano con cura per maggiore qualità
             </p>
           </div>
-          <div className="col-6" onClick={workPage}>
-            <h3 className="h1 fw-bold">
-              Vuoi far parte <br />
-              del nostro Team?
-            </h3>
-            <p className="h5">
-              La nostra famiglia si allarga <br /> Unisciti a Noi.
-            </p>
+          <div
+            className="col-6 d-flex justify-content-between"
+            onClick={workPage}
+          >
+            <div>
+              <h3 className="h1 fw-bold">
+                Vuoi far parte <br />
+                del nostro Team?
+              </h3>
+              <p className="h5">
+                La nostra famiglia si allarga <br /> Unisciti a Noi.
+              </p>
+            </div>
+            <img src={HomeLink4} alt="LinkImg4" style={{ height: "180px" }} />
           </div>
         </div>
       </div>
