@@ -11,6 +11,14 @@ const HomePageLink = () => {
   const upPage = () => {
     navigate("/");
   };
+
+  const novitaPage = () => {
+    navigate("/novita");
+  };
+
+  const productPage = () => {
+    navigate("/i-nostri-prodotti");
+  };
   return (
     <Container>
       <div>
@@ -25,7 +33,7 @@ const HomePageLink = () => {
               <p className="h5">Da oggi basta con un click!</p>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-6" onClick={novitaPage}>
             <h3 className="h1 fw-bold">
               Scopri anche
               <br />
@@ -37,7 +45,7 @@ const HomePageLink = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-6">
+          <div className="col-6" onClick={productPage}>
             <h3 className="h1 fw-bold">
               Tutta
               <br /> la nostra qualità

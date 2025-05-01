@@ -12,12 +12,18 @@ body {
     background-color: #F04D31;
 }
 
+.workShadow {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
 /*Lavora con noi*/
 
 .LavoraBack {
-    background-image: url(../src/assets/img/lavoraconnoiBackGround.webp);
+    background-image: url(../src/assets/img/lavoraConNoi/workWithUsBg.jpg);
     ;
 }
+
+
 
 
 /*footer*/

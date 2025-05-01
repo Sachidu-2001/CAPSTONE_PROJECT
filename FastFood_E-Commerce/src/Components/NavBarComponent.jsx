@@ -197,7 +197,7 @@ const NavBarComponent = () => {
               className="text-white backgroundRed border border-rounded"
               onClick={handleShow}
             >
-              ACCEDI PER ORDINARE
+              ORDINA ORA
             </Button>
           </>
         )}

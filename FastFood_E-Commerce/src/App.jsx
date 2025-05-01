@@ -23,22 +23,27 @@ function App() {
       <BrowserRouter>
         <div className="d-flex flex-column" style={{ minHeight: "100vh" }}>
           <NavBarComponent />
-          <Routes>
-            <Route path="/" element={<HomePageComponent />} />
-            <Route path="/lavora-con-noi" element={<LavoraConNoiComponent />} />
-            <Route path="/novita" element={<NovitaComponent />} />
-            <Route path="/i-nostri-prodotti" element={<ProductsComponent />}>
-              <Route path="menu" element={<ProductMenu />} />
-              <Route path="panini" element={<ProductPanini />} />
-              <Route path="bevande" element={<ProductBevande />} />
-              <Route path="gelati" element={<ProductGelati />} />
-              <Route path="patatine" element={<ProductPatatine />} />
-              <Route path="salse" element={<ProductSalse />} />
-            </Route>
-            <Route path="/orders" element={<OrderComponent />} />
-            <Route path="/checkout" element={<CheckOutComponent />}></Route>
-            <Route path="*" element={<NotFoundComponent />} />
-          </Routes>
+          <div className="flex-grow-1">
+            <Routes>
+              <Route path="/" element={<HomePageComponent />} />
+              <Route
+                path="/lavora-con-noi"
+                element={<LavoraConNoiComponent />}
+              />
+              <Route path="/novita" element={<NovitaComponent />} />
+              <Route path="/i-nostri-prodotti" element={<ProductsComponent />}>
+                <Route path="menu" element={<ProductMenu />} />
+                <Route path="panini" element={<ProductPanini />} />
+                <Route path="bevande" element={<ProductBevande />} />
+                <Route path="gelati" element={<ProductGelati />} />
+                <Route path="patatine" element={<ProductPatatine />} />
+                <Route path="salse" element={<ProductSalse />} />
+              </Route>
+              <Route path="/orders" element={<OrderComponent />} />
+              <Route path="/checkout" element={<CheckOutComponent />}></Route>
+              <Route path="*" element={<NotFoundComponent />} />
+            </Routes>
+          </div>
           <FooterComponent />
         </div>
       </BrowserRouter>
