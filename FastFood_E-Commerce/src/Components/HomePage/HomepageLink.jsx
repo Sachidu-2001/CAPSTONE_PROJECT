@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import HomeLink1 from "../../assets/img/phoneimg.webp";
-import HomeLink4 from "../../assets/img/falloutlogo.png";
+import HomeLink4 from "../../assets/img/Workimg.png";
 
 const HomePageLink = () => {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ const HomePageLink = () => {
             <h3 className="h1 fw-bold">
               Scopri anche
               <br />
-              le Nostre Offerte esclusive
+              le Nostre Offerte
               <br />
               Solo per Te
             </h3>

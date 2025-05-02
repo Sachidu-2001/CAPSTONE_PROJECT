@@ -35,12 +35,19 @@ const ProductPatatine = () => {
       <Row>
         {products.patate.map((prt, index) => (
           <Col lg={3}>
-            <Card style={{ width: "18rem" }} key={index}>
+            <Card
+              style={{ width: "18rem" }}
+              key={index}
+              className="p-0 m-1 mb-2"
+            >
               <Card.Img variant="top" src={prt.image} />
               <Card.Body>
                 <Card.Title>{prt.name}</Card.Title>
                 <Card.Text>{prt.price} &euro;</Card.Text>
-                <Button variant="primary" onClick={() => handleShow(prt)}>
+                <Button
+                  className="backGroundRed border-0"
+                  onClick={() => handleShow(prt)}
+                >
                   Vedi Dettagli
                 </Button>
               </Card.Body>
