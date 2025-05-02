@@ -97,7 +97,9 @@ const NavBarComponent = () => {
               <span className="me-3 my-auto">
                 Benvenuto, {userName} {userSurName}
               </span>
-              <Button onClick={handleLogout}>Esci</Button>
+              <Button className="backgroundRed" onClick={handleLogout}>
+                Esci
+              </Button>
             </div>
             <div>
               <Icon.Cart
@@ -194,7 +196,7 @@ const NavBarComponent = () => {
 
             <Button
               type="button"
-              className="text-white backgroundRed border border-rounded"
+              className="text-white backgroundRed border-rounded"
               onClick={handleShow}
             >
               ORDINA ORA
@@ -248,10 +250,10 @@ const NavBarComponent = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="warning" onClick={handleClose}>
             Chiudi
           </Button>
-          <Button variant="primary" onClick={handleLogin}>
+          <Button className="backgroundRed" onClick={handleLogin}>
             Accedi
           </Button>
         </Modal.Footer>

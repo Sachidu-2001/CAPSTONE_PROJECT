@@ -44,7 +44,7 @@ const ProductBevande = () => {
                 <Card.Title>{prt.name}</Card.Title>
                 <Card.Text>{prt.price} &euro;</Card.Text>
                 <Button
-                  className="backgroundRed border-0"
+                  className="backgroundRed"
                   onClick={() => handleShow(prt)}
                 >
                   Vedi Dettagli
@@ -66,7 +66,7 @@ const ProductBevande = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button className="backgroundRed border-0" onClick={handleClose}>
+          <Button className="backgroundRed" onClick={handleClose}>
             Chiudi
           </Button>
         </Modal.Footer>

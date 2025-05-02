@@ -38,12 +38,19 @@ const OrderList = () => {
         <Row>
           {products[category].map((prt, index) => (
             <Col lg={3}>
-              <Card style={{ width: "18rem" }} key={index}>
+              <Card
+                style={{ width: "18rem" }}
+                className="cardProducts my-3"
+                key={index}
+              >
                 <Card.Img variant="top" src={prt.image} />
                 <Card.Body>
                   <Card.Title>{prt.name}</Card.Title>
                   <Card.Text>{prt.price} &euro;</Card.Text>
-                  <Button variant="primary" onClick={() => addToCart(prt)}>
+                  <Button
+                    className="backgroundRed"
+                    onClick={() => addToCart(prt)}
+                  >
                     Aggiungi
                   </Button>
                 </Card.Body>

@@ -6,9 +6,9 @@ import nov4 from "../../assets/img/novita4.webp";
 
 const NovitaComponent = () => {
   return (
-    <Container>
+    <Container className="mb-5">
       <div>
-        <h2>Novità</h2>
+        <h1 className="display-3">Novità</h1>
       </div>
       <div>
         <div className="row">
