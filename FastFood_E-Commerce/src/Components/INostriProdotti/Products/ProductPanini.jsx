@@ -31,14 +31,13 @@ const ProductPanini = () => {
   fetchingProducts();
   return (
     <Container>
-      <h2>Panini</h2>
-      <Row className="gy-4">
+      <Row>
         {products.panini.map((prt, index) => (
           <Col lg={3}>
             <Card
               style={{ width: "18rem" }}
               key={index}
-              className="p-0 m-1 mb-2"
+              className="p-0 m-1 mb-2 cardProducts"
             >
               <Card.Img variant="top" src={prt.image} />
               <Card.Body>
@@ -67,7 +66,7 @@ const ProductPanini = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
+          <Button className="backgroundRed border-0" onClick={handleClose}>
             Chiudi
           </Button>
         </Modal.Footer>

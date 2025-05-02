@@ -1,7 +1,8 @@
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import HomeLink1 from "../../assets/img/phoneimg.webp";
-import HomeLink4 from "../../assets/img/Workimg.png";
+import HomeLink1 from "../../assets/img/HomeImg/phonenobg.png";
+import HomeLink3 from "../../assets/img/HomeImg/cowimg.jpg";
+import HomeLink4 from "../../assets/img/HomeImg/Workimg.png";
 
 const HomePageLink = () => {
   const navigate = useNavigate();
@@ -51,15 +52,21 @@ const HomePageLink = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-6" onClick={productPage}>
-            <h3 className="h1 fw-bold">
-              Tutta
-              <br /> la nostra qualità
-            </h3>
-            <p className="h5">
-              I nostri prodotti sono 100% italiani
-              <br /> e i nostri partner lavorano con cura per maggiore qualità
-            </p>
+          <div
+            className="col-6 d-flex justify-content-between"
+            onClick={productPage}
+          >
+            <div>
+              <h3 className="h1 fw-bold">
+                Tutta
+                <br /> la nostra qualità
+              </h3>
+              <p className="h5">
+                I nostri prodotti sono 100% italiani
+                <br /> e i nostri partner lavorano con cura per maggiore qualità
+              </p>
+            </div>
+            <img src={HomeLink3} alt="LinkImg3" style={{ height: "180px" }} />
           </div>
           <div
             className="col-6 d-flex justify-content-between"

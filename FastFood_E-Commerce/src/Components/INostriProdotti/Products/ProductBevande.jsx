@@ -31,21 +31,20 @@ const ProductBevande = () => {
   fetchingProducts();
   return (
     <Container>
-      <h2>Bevande</h2>
       <Row className="gy-4">
         {products.bevande.map((prt, index) => (
           <Col lg={3}>
             <Card
               style={{ width: "18rem" }}
               key={index}
-              className="p-0 m-1 mb-2"
+              className="p-0 m-1 mb-2 cardProducts"
             >
               <Card.Img variant="top" src={prt.image} />
               <Card.Body>
                 <Card.Title>{prt.name}</Card.Title>
                 <Card.Text>{prt.price} &euro;</Card.Text>
                 <Button
-                  className="backGroundRed border-0"
+                  className="backgroundRed border-0"
                   onClick={() => handleShow(prt)}
                 >
                   Vedi Dettagli
@@ -67,7 +66,7 @@ const ProductBevande = () => {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
+          <Button className="backgroundRed border-0" onClick={handleClose}>
             Chiudi
           </Button>
         </Modal.Footer>
