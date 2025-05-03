@@ -8,7 +8,7 @@ const NovitaComponent = () => {
   return (
     <Container className="mb-5">
       <div>
-        <h1 className="display-3">Novità</h1>
+        <h1 className="display-3">Novit</h1>
       </div>
       <div>
         <div className="row">
