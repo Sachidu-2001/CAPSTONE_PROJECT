@@ -116,7 +116,11 @@ const NavBarComponent = () => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title>
-                  Totale provvisorio: {totalPrice.toFixed(2)} &euro;
+                  Totale provvisorio:
+                  <span className="fw-bold">
+                    {" "}
+                    {totalPrice.toFixed(2)} &euro;
+                  </span>
                   <Button
                     className="rounded-pill btn-warning"
                     onClick={() => {

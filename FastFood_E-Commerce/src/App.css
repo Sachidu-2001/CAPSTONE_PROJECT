@@ -24,6 +24,35 @@ body {
 
 }
 
+@media (max-width:768px) {
+    .carouselCap {
+        top: 15%
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-indicators {
+    opacity: 0;
+
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover,
+.carousel-indicators:hover {
+    opacity: 0.5;
+}
+
+
+.homeLink {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homeLink:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
 
 

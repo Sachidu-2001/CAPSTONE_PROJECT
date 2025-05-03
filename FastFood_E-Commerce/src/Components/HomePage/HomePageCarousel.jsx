@@ -6,14 +6,8 @@ import car3 from "../../assets/img/carousel/carousel_img_31.png";
 import car4 from "../../assets/img/carousel/carousel_img_4.png";
 
 const HomePageCarousel = () => {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel>
       <Carousel.Item interval={700}>
         <img className="d-block w-100 imgCar" src={car1} alt="Carouselimg1" />
         <Carousel.Caption className="carouselCap text-start container workShadow">
@@ -35,7 +29,9 @@ const HomePageCarousel = () => {
       <Carousel.Item interval={700}>
         <img className="d-block w-100 imgCar" src={car3} alt="Carouselimg3" />
         <Carousel.Caption className="carouselCap text-start container workShadow">
-          <h3 className="display-3">Siamo aperti fino tardi</h3>
+          <h3 className="display-3">
+            Siamo aperti <p className="d-md-inline">fino tardi</p>
+          </h3>
           <p className="h2">Vieni a gustarti il Menù notturno.</p>
         </Carousel.Caption>
       </Carousel.Item>

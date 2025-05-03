@@ -28,7 +28,7 @@ const HomePageLink = () => {
       <div>
         <div className="row">
           <div
-            className="col-6 d-flex justify-content-between"
+            className="col-lg-6 d-flex justify-content-between homeLink"
             onClick={upPage}
           >
             <div>
@@ -42,7 +42,7 @@ const HomePageLink = () => {
             <img src={HomeLink1} alt="linkImg1" style={{ height: "180px" }} />
           </div>
           <div
-            className="col-6 d-flex justify-content-between"
+            className="col-lg-6 d-flex justify-content-between homeLink"
             onClick={novitaPage}
           >
             <div>
@@ -60,7 +60,7 @@ const HomePageLink = () => {
         </div>
         <div className="row">
           <div
-            className="col-6 d-flex justify-content-between"
+            className="col-md-6 d-flex justify-content-between homeLink"
             onClick={productPage}
           >
             <div>
@@ -76,7 +76,7 @@ const HomePageLink = () => {
             <img src={HomeLink3} alt="LinkImg3" style={{ height: "180px" }} />
           </div>
           <div
-            className="col-6 d-flex justify-content-between"
+            className="col-12 col-md-6 d-flex justify-content-between homeLink"
             onClick={workPage}
           >
             <div>

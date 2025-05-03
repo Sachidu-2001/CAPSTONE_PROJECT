@@ -13,18 +13,18 @@ const FooterComponent = () => {
           <Icon.Youtube />
         </div>
       </div>
-      <div className="d-flex justify-content-evenly pt-4">
-        <h6>FAQ</h6>
-        <h6>Contattaci</h6>
-        <h6>La tua opinione conta</h6>
-        <h6>Regolamenti</h6>
-        <h6>Privacy</h6>
-        <h6>Cookies</h6>
-        <h6>Termini e Condizioni</h6>
-        <h6>Invia CV</h6>
+      <div className="row d-flex justify-content-md-evenly pt-4 text-center">
+        <h6 className="col-6 col-md-auto text-center">FAQ</h6>
+        <h6 className="col-6 col-md-auto text-center">Contattaci</h6>
+        <h6 className="col-6 col-md-auto text-center">La tua opinione conta</h6>
+        <h6 className="col-6 col-md-auto text-center">Regolamenti</h6>
+        <h6 className="col-6 col-md-auto text-center">Privacy</h6>
+        <h6 className="col-6 col-md-auto text-center">Cookies</h6>
+        <h6 className="col-6 col-md-auto text-center">Termini e Condizioni</h6>
+        <h6 className="col-6 col-md-auto text-center">Invia CV</h6>
       </div>
       <h6 className="text-center py-4">
-        Copyright &copy; 2025 McDonald's All rights reserved
+        Copyright &copy; 2025 Fast&Tasty All rights reserved
       </h6>
     </div>
   );
