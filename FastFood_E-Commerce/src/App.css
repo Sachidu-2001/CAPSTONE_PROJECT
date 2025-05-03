@@ -4,6 +4,7 @@
 body {
     color: #212121;
     font-family: 'Spectral', sans-serif;
+    overflow-x: hidden;
 }
 
 /*Navbar*/
@@ -20,13 +21,13 @@ body {
 /*HomePage*/
 
 .carouselCap {
-    top: 35%;
+    top: 25%;
 
 }
 
 @media (max-width:768px) {
     .carouselCap {
-        top: 15%
+        top: 3%
     }
 }
 
@@ -45,12 +46,11 @@ body {
 
 
 .homeLink {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .homeLink:hover {
     cursor: pointer;
-    transform: scale(1.1);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -63,7 +63,6 @@ body {
     border: none;
 
 }
-
 
 /*Lavora con noi*/
 

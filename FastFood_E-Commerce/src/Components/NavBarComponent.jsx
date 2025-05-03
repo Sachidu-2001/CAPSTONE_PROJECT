@@ -87,8 +87,8 @@ const NavBarComponent = () => {
 
   return (
     <Navbar className="bg-white">
-      <div className="container d-flex justify-content-between">
-        <Navbar.Brand className="p-0 m-0">
+      <div className="container d-md-flex justify-content-between">
+        <Navbar.Brand className="p-0 m-0 d-none d-md-block">
           <img src={logo1} alt="logo" style={{ width: "4rem" }} />
         </Navbar.Brand>
         {isLoggedIn ? (

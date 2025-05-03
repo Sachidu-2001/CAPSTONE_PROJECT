@@ -21,7 +21,7 @@ const HomePageCarousel = () => {
         <img className="d-block w-100 imgCar" src={car2} alt="Carouselimg2" />
         <Carousel.Caption className="carouselCap text-start container workShadow">
           <h3 className="display-3">
-            Un posto dove<br></br> mangiare in compagnia
+            Un posto dove<br></br> mangiare insieme
           </h3>
           <p className="h2">Da noi ti sentirai a casa.</p>
         </Carousel.Caption>
