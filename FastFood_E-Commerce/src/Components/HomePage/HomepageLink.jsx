@@ -1,7 +1,8 @@
 import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import HomeLink1 from "../../assets/img/HomeImg/phonenobg.png";
-import HomeLink3 from "../../assets/img/HomeImg/cowimg.jpg";
+import HomeLink2 from "../../assets/img/HomeImg/foodIcon.png";
+import HomeLink3 from "../../assets/img/HomeImg/cowimg1.png";
 import HomeLink4 from "../../assets/img/HomeImg/Workimg.png";
 
 const HomePageLink = () => {
@@ -38,17 +39,23 @@ const HomePageLink = () => {
               </h3>
               <p className="h5">Da oggi basta con un click!</p>
             </div>
-            <img src={HomeLink1} alt="likImg1" style={{ height: "180px" }} />
+            <img src={HomeLink1} alt="linkImg1" style={{ height: "180px" }} />
           </div>
-          <div className="col-6" onClick={novitaPage}>
-            <h3 className="h1 fw-bold">
-              Scopri anche
-              <br />
-              le Nostre Offerte
-              <br />
-              Solo per Te
-            </h3>
-            <p className="h5"> Offerte colazione,pranzo e cena</p>
+          <div
+            className="col-6 d-flex justify-content-between"
+            onClick={novitaPage}
+          >
+            <div>
+              <h3 className="h1 fw-bold">
+                Scopri anche
+                <br />
+                le Nostre Offerte
+                <br />
+                Solo per Te
+              </h3>
+              <p className="h5"> Offerte colazione,pranzo e cena</p>
+            </div>
+            <img src={HomeLink2} alt="LinkImg2" style={{ height: "180px" }} />
           </div>
         </div>
         <div className="row">

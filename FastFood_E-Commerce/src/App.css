@@ -22,21 +22,24 @@ body {
 .carouselCap {
     top: 35%;
 
-
 }
+
+
+
 
 
 /*I-Nostri-Prodotti*/
 
 .cardProducts {
-    border-color: #F04D31;
-    border-radius: 15%;
+    border: none;
+
 }
 
 
 /*Lavora con noi*/
 
 .LavoraBack {
+    margin: auto;
     background-image: url(../src/assets/img/lavoraConNoi/workWithUsBg.jpg);
     ;
 }

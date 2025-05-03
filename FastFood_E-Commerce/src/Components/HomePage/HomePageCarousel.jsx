@@ -1,12 +1,19 @@
 import { Carousel } from "react-bootstrap";
+import { useState } from "react";
 import car1 from "../../assets/img/carousel/carousel_img_1.png";
 import car2 from "../../assets/img/carousel/carousel_img_2.png";
 import car3 from "../../assets/img/carousel/carousel_img_31.png";
 import car4 from "../../assets/img/carousel/carousel_img_4.png";
 
 const HomePageCarousel = () => {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
+
   return (
-    <Carousel>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item interval={700}>
         <img className="d-block w-100 imgCar" src={car1} alt="Carouselimg1" />
         <Carousel.Caption className="carouselCap text-start container workShadow">
