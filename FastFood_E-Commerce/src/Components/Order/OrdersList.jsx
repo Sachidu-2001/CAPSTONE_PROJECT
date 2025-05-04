@@ -7,12 +7,15 @@ const OrderList = () => {
     panini: [],
     bevande: [],
     patate: [],
+    salse: [],
+    gelati: [],
+    menu: [],
   });
   const [category, setCategory] = useState("panini");
   const { addToCart } = useCart();
 
   //fetch Get
-  const url = `https://mocki.io/v1/bfe60262-c3a1-43ce-9a55-027e9693cc2f`;
+  const url = `https://mocki.io/v1/20391c62-94b6-472e-8609-4a347e9bfaca`;
 
   const fetchingProducts = async () => {
     try {
@@ -31,8 +34,11 @@ const OrderList = () => {
     <Container>
       <div className="d-flex justify-content-around">
         <h3 onClick={() => setCategory("panini")}>Panini</h3>
-        <h3 onClick={() => setCategory("patate")}>Patate</h3>
+        <h3 onClick={() => setCategory("menu")}>Menu</h3>
         <h3 onClick={() => setCategory("bevande")}>Bevande</h3>
+        <h3 onClick={() => setCategory("patate")}>Patate</h3>
+        <h3 onClick={() => setCategory("gelati")}>Gelati</h3>
+        <h3 onClick={() => setCategory("salse")}>Salse</h3>
       </div>
       <div>
         <Row>
