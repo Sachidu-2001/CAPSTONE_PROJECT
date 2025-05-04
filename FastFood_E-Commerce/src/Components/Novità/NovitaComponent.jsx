@@ -20,17 +20,14 @@ const NovitaComponent = () => {
             <h3>Prova le Sfiziosità</h3>
             <img src={nov2} alt="novita2" />
           </div>
-        </div>
-        <div className="mt-5">
-          <div className="row">
-            <div className="col-md-6 col-12">
-              <h3>Prova gli "Unlimited Edition"</h3>
-              <img src={nov3} alt="novita3" />
-            </div>
-            <div className="col-md-6 col-12">
-              <h3>Altre offerte Fast&Tasty</h3>
-              <img src={nov4} alt="novita2" />
-            </div>
+
+          <div className="col-md-6 col-12">
+            <h3>Prova gli "Unlimited Edition"</h3>
+            <img src={nov3} alt="novita3" />
+          </div>
+          <div className="col-md-6 col-12">
+            <h3>Altre offerte Fast&Tasty</h3>
+            <img src={nov4} alt="novita2" />
           </div>
         </div>
       </div>
