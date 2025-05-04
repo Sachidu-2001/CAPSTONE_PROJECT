@@ -33,12 +33,8 @@ const ProductMenu = () => {
     <Container>
       <Row className="gy-4">
         {products.menu.map((prt, index) => (
-          <Col lg={3}>
-            <Card
-              style={{ width: "18rem" }}
-              key={index}
-              className="p-0 m-1 mb-2 cardProducts"
-            >
+          <Col md={3}>
+            <Card key={index} className="p-0 m-1 mb-2 cardProducts">
               <Card.Img variant="top" src={prt.image} />
               <Card.Body>
                 <Card.Title>{prt.name}</Card.Title>

@@ -57,8 +57,6 @@ const HomePageLink = () => {
             </div>
             <img src={HomeLink2} alt="LinkImg2" style={{ height: "180px" }} />
           </div>
-        </div>
-        <div className="row">
           <div
             className="col-md-6 d-flex justify-content-between homeLink"
             onClick={productPage}
