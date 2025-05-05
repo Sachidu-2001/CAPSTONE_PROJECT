@@ -8,7 +8,7 @@ const LavCarousel = () => {
   };
   return (
     <>
-      <div className="LavoraBack w-100">
+      <div className="LavoraBack w-100 background-contain">
         <div className="mb-4 py-5 d-flex justify-content-center align-items-center">
           <h1 className="workShadow" style={{ color: "#FFC107" }}>
             LAVORA CON NOI
