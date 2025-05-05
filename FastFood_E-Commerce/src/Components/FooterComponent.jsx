@@ -1,3 +1,4 @@
+import { Container } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 
 const FooterComponent = () => {
@@ -5,7 +6,7 @@ const FooterComponent = () => {
     <div className="footerBack">
       <div className="pt-4">
         <div className="d-flex justify-content-center fs-3">
-          <h6 className="fw-bold h4 me-2">Seguici su</h6>
+          <p className="fw-bold h4 me-2">Seguici su</p>
 
           <Icon.Instagram className="me-2" />
           <Icon.Facebook className="me-2" />
@@ -13,19 +14,21 @@ const FooterComponent = () => {
           <Icon.Youtube />
         </div>
       </div>
-      <div className="row d-flex justify-content-md-evenly pt-4 text-center">
-        <h6 className="col-6 col-md-auto text-center">FAQ</h6>
-        <h6 className="col-6 col-md-auto text-center">Contattaci</h6>
-        <h6 className="col-6 col-md-auto text-center">La tua opinione conta</h6>
-        <h6 className="col-6 col-md-auto text-center">Regolamenti</h6>
-        <h6 className="col-6 col-md-auto text-center">Privacy</h6>
-        <h6 className="col-6 col-md-auto text-center">Cookies</h6>
-        <h6 className="col-6 col-md-auto text-center">Termini e Condizioni</h6>
-        <h6 className="col-6 col-md-auto text-center">Invia CV</h6>
+      <div className="container-fluid">
+        <div className="row pt-4 d-flex justify-content-evenly text-center">
+          <div className="col-6 col-md-auto">FAQ</div>
+          <div className="col-6 col-md-auto">Contattaci</div>
+          <div className="col-6 col-md-auto">La tua opinione conta</div>
+          <div className="col-6 col-md-auto">Regolamenti</div>
+          <div className="col-6 col-md-auto">Privacy</div>
+          <div className="col-6 col-md-auto">Cookies</div>
+          <div className="col-6 col-md-auto">Termini e Condizioni</div>
+          <div className="col-6 col-md-auto">Invia CV</div>
+        </div>
       </div>
-      <h6 className="text-center py-4">
+      <p className="text-center py-4">
         Copyright &copy; 2025 Fast&Tasty All rights reserved
-      </h6>
+      </p>
     </div>
   );
 };
