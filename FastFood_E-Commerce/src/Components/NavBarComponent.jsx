@@ -13,6 +13,7 @@ import { useState } from "react";
 import * as Icon from "react-bootstrap-icons";
 import { useCart } from "./CartComponent";
 import logo1 from "../assets/img/logo/logoapp.png";
+import logo2 from "../assets/img/logo/foodIcon.png";
 
 const NavBarComponent = () => {
   const location = useLocation();
@@ -85,10 +86,22 @@ const NavBarComponent = () => {
     }
   };
 
+  const homepage = () => {
+    navigate("/");
+  };
+
+  const productPage = () => {
+    navigate("/i-nostri-prodotti");
+  };
+
   return (
     <Navbar className="bg-white">
       <div className="container d-md-flex justify-content-between">
-        <Navbar.Brand className="p-0 m-0 d-none d-md-block">
+        <Navbar.Brand
+          className="p-0 m-0"
+          onClick={homepage}
+          style={{ cursor: "pointer" }}
+        >
           <img src={logo1} alt="logo" style={{ width: "4rem" }} />
         </Navbar.Brand>
         {isLoggedIn ? (
@@ -157,21 +170,25 @@ const NavBarComponent = () => {
             <Nav>
               <Link
                 to="/"
-                className={
-                  location.pathname === "/"
-                    ? "nav-link active fw-bold "
-                    : "nav-link "
-                }
+                className={`nav-link ${
+                  location.pathname === "/" ? "active fw-bold" : ""
+                } d-none d-md-block`}
               >
                 HOME
               </Link>
+              <img
+                src={logo2}
+                className="d-block d-md-none my-auto"
+                onClick={productPage}
+                style={{ height: "3em" }}
+              />
               <Link
                 to="/i-nostri-prodotti"
-                className={
+                className={`nav-link ${
                   location.pathname === "/i-nostri-prodotti"
-                    ? "nav-link active fw-bold"
-                    : "nav-link"
-                }
+                    ? "active fw-bold"
+                    : ""
+                } d-none d-md-block`}
               >
                 PRODOTTI
               </Link>
