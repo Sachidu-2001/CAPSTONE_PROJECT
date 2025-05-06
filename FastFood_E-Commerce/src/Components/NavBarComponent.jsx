@@ -94,15 +94,20 @@ const NavBarComponent = () => {
     navigate("/i-nostri-prodotti");
   };
 
+  const novitaPage = () => {
+    navigate("/novita");
+  };
+
+  const workPage = () => {
+    navigate("/lavora-con-noi");
+  };
+
   return (
     <Navbar className="bg-white">
       <div className="container d-md-flex justify-content-between">
-        <Navbar.Brand
-          className="p-0 m-0"
-          onClick={homepage}
-          style={{ cursor: "pointer" }}
-        >
+        <Navbar.Brand className="p-0 m-0 navLink" onClick={homepage}>
           <img src={logo1} alt="logo" style={{ width: "4rem" }} />
+          <p className="navText d-sm-none">Home</p>
         </Navbar.Brand>
         {isLoggedIn ? (
           <>
@@ -172,44 +177,63 @@ const NavBarComponent = () => {
                 to="/"
                 className={`nav-link ${
                   location.pathname === "/" ? "active fw-bold" : ""
-                } d-none d-md-block`}
+                } d-none d-sm-block`}
               >
                 HOME
               </Link>
-              <img
-                src={logo2}
-                className="d-block d-md-none my-auto"
+              <div
+                className="d-block d-sm-none my-auto mx-1 navLink"
                 onClick={productPage}
-                style={{ height: "3em" }}
-              />
+              >
+                <img
+                  src={logo2}
+                  className="my-auto"
+                  style={{ height: "3em" }}
+                />
+                <p className="navText">Prodotti</p>
+              </div>
               <Link
                 to="/i-nostri-prodotti"
                 className={`nav-link ${
                   location.pathname === "/i-nostri-prodotti"
                     ? "active fw-bold"
                     : ""
-                } d-none d-md-block`}
+                } d-none d-sm-block`}
               >
                 PRODOTTI
               </Link>
+              <div
+                className="d-block d-sm-none my-auto mb-0 mx-1 navLink"
+                onClick={novitaPage}
+              >
+                <Icon.Newspaper style={{ fontSize: "27px" }} className="mb-2" />
+                <p className="navText">Novità</p>
+              </div>
               <Link
                 to="/novita"
-                className={
-                  location.pathname === "/novita"
-                    ? "nav-link active fw-bold"
-                    : "nav-link"
-                }
+                className={`nav-link ${
+                  location.pathname === "/novita" ? "active fw-bold" : ""
+                } d-none d-sm-block`}
               >
                 NOVITÀ
               </Link>
+              <div
+                className="d-block d-sm-none my-auto mx-1 mb-0 navLink d-flex flex-column align-items-center"
+                onClick={workPage}
+              >
+                <Icon.PersonBadge
+                  style={{ fontSize: "27px" }}
+                  className="navIcon my-auto mb-2"
+                />
+                <p className="navText">WorkWithUS</p>
+              </div>
               <Link
-                className={
-                  location.pathname === "/lavora-con-noi"
-                    ? "nav-link active fw-bold"
-                    : "nav-link"
-                }
-                s
                 to="/lavora-con-noi"
+                className={`nav-link ${
+                  location.pathname === "/lavora-con-noi"
+                    ? "active fw-bold"
+                    : ""
+                } d-none d-sm-block`}
               >
                 LAVORA CON NOI
               </Link>

@@ -18,6 +18,22 @@ body {
     background-color: #f56a52;
 }
 
+.navLink:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.navText {
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+.navIcon {
+    text-align: center;
+}
+
+
 /*HomePage*/
 
 .carouselCap {
