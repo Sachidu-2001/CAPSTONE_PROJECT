@@ -55,7 +55,7 @@ const ProductBevande = () => {
           <Modal.Title>{selectPrt?.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body className="d-flex">
-          <img src={selectPrt?.image} />
+          <img src={selectPrt?.image} style={{ width: "30%" }} />
           <div>
             <p>{selectPrt?.description}</p>
             <p className="fs-1">{selectPrt?.price.toFixed(2)} &euro;</p>
