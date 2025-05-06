@@ -18,12 +18,16 @@ const LavCarousel = () => {
           <div className="container mb-2">
             <h2 className="text-warning workShadow">UNISCITI AL NOSTRO TEAM</h2>
             <p className="h4 text-white my-5 workShadow">
-              UNISCITI A FAST & TASTY Entrare nel team Fast & Tasty significa
-              far parte di un ambiente giovane, dinamico e sempre in fermento!
-              Ogni giorno mettiamo passione e impegno nella creazione dei nostri
-              irresistibili panini e specialità. Vuoi vivere un’esperienza
-              stimolante nel mondo del fast food? Scopri le posizioni aperte o
-              inviaci la tua candidatura spontanea. Fast & Tasty ti aspetta!
+              UNISCITI A{" "}
+              <span style={{ color: "red" }} className="fw-bold">
+                FAST & TASTY! &nbsp;
+              </span>
+              Entrare nel team Fast & Tasty significa far parte di un ambiente
+              giovane, dinamico e sempre in fermento! Ogni giorno mettiamo
+              passione e impegno nella creazione dei nostri irresistibili panini
+              e specialità. Vuoi vivere un’esperienza stimolante nel mondo del
+              fast food? Scopri le posizioni aperte o inviaci la tua candidatura
+              spontanea. Fast & Tasty ti aspetta!
             </p>
             <Button className="btn btn-warning" onClick={notFoundPage}>
               Scopri di Più
