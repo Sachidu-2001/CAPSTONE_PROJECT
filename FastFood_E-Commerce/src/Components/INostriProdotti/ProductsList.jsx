@@ -10,7 +10,7 @@ import Prdt6 from "../../assets/img/Product6.png";
 const ProductsList = () => {
   const location = useLocation();
   return (
-    <Container>
+    <Container className="stickyComponent">
       <div>
         <h2>I Nostri Prodotti</h2>
       </div>

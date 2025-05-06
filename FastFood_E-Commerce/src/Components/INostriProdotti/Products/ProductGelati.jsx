@@ -58,7 +58,7 @@ const ProductGelati = () => {
           <img src={selectPrt?.image} />
           <div>
             <p>{selectPrt?.description}</p>
-            <p className="fs-1">{selectPrt?.price} &euro;</p>
+            <p className="fs-1">{selectPrt?.price.toFixed(2)} &euro;</p>
           </div>
         </Modal.Body>
         <Modal.Footer>
