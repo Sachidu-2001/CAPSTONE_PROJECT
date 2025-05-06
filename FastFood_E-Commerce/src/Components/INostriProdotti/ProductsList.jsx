@@ -1,11 +1,11 @@
 import { Container, Col, Row } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import Prdt1 from "../../assets/img/Product1.png";
-import Prdt2 from "../../assets/img/Product2.png";
-import Prdt3 from "../../assets/img/Product3.png";
-import Prdt4 from "../../assets/img/Product4.png";
-import Prdt5 from "../../assets/img/Product5.png";
-import Prdt6 from "../../assets/img/Product6.png";
+import Prdt1 from "../../assets/img/productList/Product1.png";
+import Prdt2 from "../../assets/img/productList/Product2.png";
+import Prdt3 from "../../assets/img/productList/Product3.png";
+import Prdt4 from "../../assets/img/productList/Product4.png";
+import Prdt5 from "../../assets/img/productList/Product5.png";
+import Prdt6 from "../../assets/img/productList/Product6.png";
 
 const ProductsList = () => {
   const location = useLocation();
