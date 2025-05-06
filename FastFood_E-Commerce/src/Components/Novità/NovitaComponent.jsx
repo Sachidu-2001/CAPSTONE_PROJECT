@@ -18,22 +18,38 @@ const NovitaComponent = () => {
       </div>
       <div>
         <div className="row">
-          <div className="col-md-6 col-12" onClick={notFound}>
+          <div
+            className="col-md-6 col-12 mb-5"
+            style={{ cursor: "pointer" }}
+            onClick={notFound}
+          >
             <h3>I nostri Panini</h3>
-            <img src={nov1} className="img-fluid" alt="novita1" />
+            <img src={nov1} className="img-fluid homeLink" alt="novita1" />
           </div>
-          <div className="col-md-6 col-12" onClick={notFound}>
+          <div
+            className="col-md-6 col-12"
+            style={{ cursor: "pointer" }}
+            onClick={notFound}
+          >
             <h3>Prova le Sfiziosità</h3>
-            <img src={nov2} className="img-fluid" alt="novita2" />
+            <img src={nov2} className="img-fluid homeLink" alt="novita2" />
           </div>
 
-          <div className="col-md-6 col-12" onClick={notFound}>
+          <div
+            className="col-md-6 col-12"
+            style={{ cursor: "pointer" }}
+            onClick={notFound}
+          >
             <h3>Prova gli "Unlimited Edition"</h3>
-            <img src={nov3} className="img-fluid" alt="novita3" />
+            <img src={nov3} className="img-fluid homeLink" alt="novita3" />
           </div>
-          <div className="col-md-6 col-12" onClick={notFound}>
+          <div
+            className="col-md-6 col-12"
+            style={{ cursor: "pointer" }}
+            onClick={notFound}
+          >
             <h3>Altre offerte Fast&Tasty</h3>
-            <img src={nov4} className="img-fluid" alt="novita2" />
+            <img src={nov4} className="img-fluid homeLink" alt="novita2" />
           </div>
         </div>
       </div>

@@ -136,7 +136,6 @@ const NavBarComponent = () => {
                 <Offcanvas.Title>
                   Totale provvisorio:
                   <span className="fw-bold">
-                    {" "}
                     {totalPrice.toFixed(2)} &euro;
                   </span>
                   <Button
@@ -177,7 +176,7 @@ const NavBarComponent = () => {
                 to="/"
                 className={`nav-link ${
                   location.pathname === "/" ? "active fw-bold" : ""
-                } d-none d-sm-block`}
+                } d-none d-sm-block navLink`}
               >
                 HOME
               </Link>
@@ -198,7 +197,7 @@ const NavBarComponent = () => {
                   location.pathname === "/i-nostri-prodotti"
                     ? "active fw-bold"
                     : ""
-                } d-none d-sm-block`}
+                } d-none d-sm-block navLink`}
               >
                 PRODOTTI
               </Link>
@@ -213,7 +212,7 @@ const NavBarComponent = () => {
                 to="/novita"
                 className={`nav-link ${
                   location.pathname === "/novita" ? "active fw-bold" : ""
-                } d-none d-sm-block`}
+                } d-none d-sm-block navLink`}
               >
                 NOVITÀ
               </Link>
@@ -233,7 +232,7 @@ const NavBarComponent = () => {
                   location.pathname === "/lavora-con-noi"
                     ? "active fw-bold"
                     : ""
-                } d-none d-sm-block`}
+                } d-none d-sm-block navLink`}
               >
                 LAVORA CON NOI
               </Link>

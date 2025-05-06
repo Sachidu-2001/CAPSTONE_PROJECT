@@ -38,7 +38,7 @@ const ProductSalse = () => {
               <Card.Img variant="top" src={prt.image} />
               <Card.Body>
                 <Card.Title>{prt.name}</Card.Title>
-                <Card.Text>{prt.price} &euro;</Card.Text>
+                <Card.Text>{prt.price.toFixed(2)} &euro;</Card.Text>
                 <Button
                   className="backgroundRed"
                   onClick={() => handleShow(prt)}
