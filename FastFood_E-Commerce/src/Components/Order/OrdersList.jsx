@@ -32,23 +32,52 @@ const OrderList = () => {
 
   return (
     <Container>
-      <div className="d-flex justify-content-around">
-        <h3 onClick={() => setCategory("panini")}>Panini</h3>
-        <h3 onClick={() => setCategory("menu")}>Menu</h3>
-        <h3 onClick={() => setCategory("bevande")}>Bevande</h3>
-        <h3 onClick={() => setCategory("patate")}>Patate</h3>
-        <h3 onClick={() => setCategory("gelati")}>Gelati</h3>
-        <h3 onClick={() => setCategory("salse")}>Salse</h3>
+      <div className="stickyComponent">
+        <h2>Crea il tuo ordine</h2>
+        <div className="d-flex justify-content-around row g-2">
+          <Button
+            className="btn-warning rounded-pill col-sm-2 col-4"
+            onClick={() => setCategory("panini")}
+          >
+            Panini
+          </Button>
+          <Button
+            className="btn-warning rounded-pill col-sm-2 col-4"
+            onClick={() => setCategory("menu")}
+          >
+            Menu
+          </Button>
+          <Button
+            className="btn-warning rounded-pill col-sm-2 col-4"
+            onClick={() => setCategory("bevande")}
+          >
+            Bevande
+          </Button>
+          <Button
+            className="btn-warning rounded-pill col-sm-2 col-4"
+            onClick={() => setCategory("patate")}
+          >
+            Patate
+          </Button>
+          <Button
+            className="btn-warning rounded-pill col-sm-2 col-4"
+            onClick={() => setCategory("gelati")}
+          >
+            Gelati
+          </Button>
+          <Button
+            className="btn-warning rounded-pill col-sm-2 col-4"
+            onClick={() => setCategory("salse")}
+          >
+            Salse
+          </Button>
+        </div>
       </div>
       <div>
         <Row>
           {products[category].map((prt, index) => (
-            <Col lg={3}>
-              <Card
-                style={{ width: "18rem" }}
-                className="cardProducts my-3"
-                key={index}
-              >
+            <Col lg={3} xs={6}>
+              <Card className="cardProducts my-3" key={index}>
                 <Card.Img variant="top" src={prt.image} />
                 <Card.Body>
                   <Card.Title>{prt.name}</Card.Title>
