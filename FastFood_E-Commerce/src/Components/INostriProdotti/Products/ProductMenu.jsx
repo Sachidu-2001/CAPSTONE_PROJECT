@@ -54,7 +54,7 @@ const ProductMenu = () => {
         <Modal.Header closeButton>
           <Modal.Title>{selectPrt?.name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="d-flex">
+        <Modal.Body className="d-sm-flex">
           <img src={selectPrt?.image} className="img-fluid" />
           <div>
             <p>{selectPrt?.description}</p>

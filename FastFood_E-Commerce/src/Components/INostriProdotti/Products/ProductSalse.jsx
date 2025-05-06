@@ -54,8 +54,8 @@ const ProductSalse = () => {
         <Modal.Header closeButton>
           <Modal.Title>{selectPrt?.name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body className="d-flex">
-          <img src={selectPrt?.image} />
+        <Modal.Body className="d-sm-flex">
+          <img src={selectPrt?.image} className="img-fluid" />
           <div>
             <p>{selectPrt?.description}</p>
             <p className="fs-1">{selectPrt?.price.toFixed(2)} &euro;</p>
