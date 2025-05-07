@@ -15,7 +15,7 @@ const ProductPatatine = () => {
     setShow(true);
   };
 
-  const url = `https://mocki.io/v1/20391c62-94b6-472e-8609-4a347e9bfaca`;
+  const url = `https://mocki.io/v1/4cdaf963-f6f2-406b-9e73-0d9f699b3391`;
 
   const fetchingProducts = async () => {
     try {
