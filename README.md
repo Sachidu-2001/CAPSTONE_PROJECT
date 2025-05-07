@@ -2,7 +2,7 @@
 
 ## 🎯 Obiettivo
 
-Fast&Tasty RestaurantApp che permette ai clienti di ordinare comodamente i prodotti del ristorante tramite **smartphone, tablet o PC**, evitando così la fila alla cassa o l'attesa davanti ai totem self-service.
+**Fast&Tasty RestaurantApp** permette ai clienti di ordinare comodamente i prodotti del ristorante tramite **smartphone, tablet o PC**, evitando così la fila alla cassa o l'attesa davanti ai totem self-service.
 
 Sito hostato su-**https://fastandtasty.vercel.app/**
 
@@ -35,3 +35,10 @@ Se tutte le informazioni sono corrette, l’ordine verrà confermato e il client
 - **API REST Fittizia**
   Per l'elenco dei prodotti, è stata utilizzata una API esterna simulata:
   `https://mocki.io/v1/4cdaf963-f6f2-406b-9e73-0d9f699b3391`
+
+## Installazione
+
+**Pacchetti da Installare:**
+
+- **Node.js**
+- **Visual Studio Code**
