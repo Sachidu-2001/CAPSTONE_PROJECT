@@ -1,2 +1,2 @@
-![logoapp](https://github.com/user-attachments/assets/f98c989a-a81e-401a-8995-3d1d2ad95a5f)
+<img src="/FastFood_E-Commerce/public/logoapp.png" width="10em">
 # Fast&Tasty RestaurantApp
