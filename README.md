@@ -1,4 +1,4 @@
-# <div style="text-align: center;"><img src="/FastFood_E-Commerce/public/logoapp.png" width="25%"></div> Fast&Tasty RestaurantApp
+# <p align="centerc"><img src="/FastFood_E-Commerce/public/logoapp.png" width="25%"></div> Fast&Tasty RestaurantApp
 
 ## 🎯 Obiettivo
 
