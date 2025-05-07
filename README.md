@@ -36,9 +36,20 @@ Se tutte le informazioni sono corrette, l’ordine verrà confermato e il client
   Per l'elenco dei prodotti, è stata utilizzata una API esterna simulata:
   `https://mocki.io/v1/4cdaf963-f6f2-406b-9e73-0d9f699b3391`
 
-## Installazione
+## 💾 Installazione
 
-**Pacchetti da Installare:**
+**📦 Pacchetti da Installare:**
 
 - **Node.js**
 - **Visual Studio Code**
+
+**⚙️ Passaggi per setup**
+
+1. **Clona il repository**
+   git clone https://github.com/Sachidu-2001/CAPSTONE_PROJECT.git
+2. **Accedi alla cartella**
+   `cd FastFood_E-Commerce`
+3. **Installa le dipendenza**
+   `npm install`
+4. **Apri sito il locale**
+   `CTRL+C e clicca sul link`
