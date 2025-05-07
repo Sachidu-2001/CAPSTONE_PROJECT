@@ -4,7 +4,7 @@
 
 **Fast&Tasty RestaurantApp** permette ai clienti di ordinare comodamente i prodotti del ristorante tramite **smartphone, tablet o PC**, evitando così la fila alla cassa o l'attesa davanti ai totem self-service.
 
-Sito hostato su-**https://fastandtasty.vercel.app/**
+🌐 Sito hostato su-**https://fastandtasty.vercel.app/**
 
 ## 🖥️ Panoramica
 
@@ -49,7 +49,12 @@ Se tutte le informazioni sono corrette, l’ordine verrà confermato e il client
    `git clone https://github.com/Sachidu-2001/CAPSTONE_PROJECT.git`
 2. **Accedi alla cartella**<br>
    `cd FastFood_E-Commerce`
-3. **Installa le dipendenza**<br>
+3. **Installa le dipendenze**<br>
    `npm install`
 4. **Apri sito il locale**<br>
    `CTRL+C e clicca sul link`
+
+## 🧑‍💻 Autore
+
+**Nome:** Sachidu Fernando
+**GitHub:**[@Sachidu-2001](https://github.com/Sachidu-2001)
