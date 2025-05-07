@@ -34,4 +34,4 @@ Se tutte le informazioni sono corrette, l’ordine verrà confermato e il client
 
 - **API REST Fittizia**
   Per l'elenco dei prodotti, è stata utilizzata una API esterna simulata:
-  `https://mocki.io/v1/20391c62-94b6-472e-8609-4a347e9bfaca`
+  `https://mocki.io/v1/4cdaf963-f6f2-406b-9e73-0d9f699b3391`
