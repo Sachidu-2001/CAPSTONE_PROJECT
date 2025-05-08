@@ -8,16 +8,16 @@ import car4 from "../../assets/img/carousel/carousel_img_4.png";
 const HomePageCarousel = () => {
   return (
     <Carousel>
-      <Carousel.Item interval={700}>
+      <Carousel.Item interval={1000}>
         <img className="d-block w-100 imgCar" src={car1} alt="Carouselimg1" />
-        <Carousel.Caption className="carouselCap text-start container workShadow">
+        <Carousel.Caption className="carouselCap text-start container workShadow ps-0">
           <h3 className="display-3">
             Hai già provato <br></br> la nostra salsa
           </h3>
-          <p className="h2">Prova il nuovo Double Chicken Devil</p>
+          <p className="fs-2">Prova il nuovo Double Chicken Devil</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={700}>
+      <Carousel.Item interval={1000}>
         <img className="d-block w-100 imgCar" src={car2} alt="Carouselimg2" />
         <Carousel.Caption className="carouselCap text-start container workShadow">
           <h3 className="display-3">
@@ -26,7 +26,7 @@ const HomePageCarousel = () => {
           <p className="h2">Da noi ti sentirai a casa.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={700}>
+      <Carousel.Item interval={1000}>
         <img className="d-block w-100 imgCar" src={car3} alt="Carouselimg3" />
         <Carousel.Caption className="carouselCap text-start container workShadow">
           <h3 className="display-3">
@@ -35,7 +35,7 @@ const HomePageCarousel = () => {
           <p className="h2">Vieni a gustarti il Menù notturno.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={700}>
+      <Carousel.Item interval={1000}>
         <img className="d-block w-100 imgCar" src={car4} alt="Carouselimg4" />
         <Carousel.Caption className="carouselCap text-start container workShadow">
           <h3 className="display-3">
