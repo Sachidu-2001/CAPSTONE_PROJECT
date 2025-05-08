@@ -51,7 +51,10 @@ Se tutte le informazioni sono corrette, l’ordine verrà confermato e il client
    `cd FastFood_E-Commerce`
 3. **Installa le dipendenze**<br>
    `npm install`
-4. **Apri sito il locale**<br>
+4. **Avvia il sito**<br>
+   `npm run dev`
+
+5. **Apri sito il locale**<br>
    `CTRL+C e clicca sul link`
 
 ## 🧑‍💻 Autore
