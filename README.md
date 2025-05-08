@@ -48,7 +48,7 @@ Se tutte le informazioni sono corrette, l’ordine verrà confermato e il client
 1. **Clona il repository**<br>
    `git clone https://github.com/Sachidu-2001/CAPSTONE_PROJECT.git`
 2. **Accedi alla cartella**<br>
-   `cd FastFood_E-Commerce`
+   `cd FastFood_E-Commerce`s
 3. **Installa le dipendenze**<br>
    `npm install`
 4. **Avvia il sito**<br>
