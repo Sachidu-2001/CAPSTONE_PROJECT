@@ -30,7 +30,7 @@ const ProductPanini = () => {
 
   fetchingProducts();
   return (
-    <Container>
+    <Container fluid>
       <Row>
         {products.panini.map((prt, index) => (
           <Col md={3}>

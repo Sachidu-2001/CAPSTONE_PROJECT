@@ -30,7 +30,7 @@ const ProductGelati = () => {
 
   fetchingProducts();
   return (
-    <Container>
+    <Container fluid>
       <Row className="gy-4">
         {products.gelati.map((prt, index) => (
           <Col md={3}>

@@ -30,7 +30,7 @@ const ProductPatatine = () => {
 
   fetchingProducts();
   return (
-    <Container>
+    <Container fluid>
       <Row>
         {products.patate.map((prt, index) => (
           <Col md={3}>

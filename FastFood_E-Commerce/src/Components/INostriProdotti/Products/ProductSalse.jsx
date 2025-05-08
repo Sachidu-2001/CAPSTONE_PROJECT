@@ -30,7 +30,7 @@ const ProductSalse = () => {
 
   fetchingProducts();
   return (
-    <Container>
+    <Container fluid>
       <Row className="gy-4">
         {products.salse.map((prt, index) => (
           <Col md={3}>

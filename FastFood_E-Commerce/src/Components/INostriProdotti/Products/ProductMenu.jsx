@@ -30,7 +30,7 @@ const ProductMenu = () => {
 
   fetchingProducts();
   return (
-    <Container>
+    <Container fluid>
       <Row className="gy-4">
         {products.menu.map((prt, index) => (
           <Col md={3}>

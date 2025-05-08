@@ -119,12 +119,9 @@ const NavBarComponent = () => {
                 Esci
               </Button>
             </div>
-            <div>
-              <Icon.Cart
-                variant="primary"
-                onClick={handleShowcanvas}
-                className="ms-5 mt-2 fs-4"
-              />
+            <div className="ms-5 mt-2 fs-4 navLink" onClick={handleShowcanvas}>
+              <Icon.Cart variant="primary" className="mx-auto" />
+              <p className="navText">Carrello</p>
             </div>
 
             <Offcanvas
@@ -227,7 +224,7 @@ const NavBarComponent = () => {
                   style={{ fontSize: "27px" }}
                   className="navIcon my-auto mb-2"
                 />
-                <p className="navText">WorkWithUS</p>
+                <p className="navText">LavoraConNoi</p>
               </div>
               <Link
                 to="/lavora-con-noi"
