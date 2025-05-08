@@ -110,6 +110,15 @@ body {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
+/*Cart*/
+
+.trash {
+    cursor: pointer;
+}
+
+.trash:hover {
+    color: red;
+}
 
 
 /*footer*/

@@ -159,8 +159,11 @@ const NavBarComponent = () => {
                         <img src={e.image} style={{ width: "10em" }} />
                         <div>
                           <p className="h5">{e.name}</p>
-                          <p className="fw-bold h4">{e.price}</p>
-                          <Icon.Trash onClick={() => removeFromCart(e)} />
+                          <p className="fw-bold h4">{e.price.toFixed(2)}</p>
+                          <Icon.Trash
+                            onClick={() => removeFromCart(e)}
+                            className="trash"
+                          />
                         </div>
                       </div>
                     </Card>
