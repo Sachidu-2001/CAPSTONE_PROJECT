@@ -27,7 +27,7 @@ const CheckOutComponent = () => {
     event.preventDefault();
     if (
       cardNumber.length === 16 &&
-      cardDate.length === 4 &&
+      cardDate.length === 5 &&
       cardCvv.length === 3
     ) {
       setShow(true);
@@ -73,7 +73,7 @@ const CheckOutComponent = () => {
             <Form.Label>Inserisci Carta</Form.Label>
             <Form.Control
               style={{ width: "18em" }}
-              type="password"
+              type="string"
               placeholder="1122 3344 5566 7788"
               maxLength={16}
               minLength={16}
@@ -87,8 +87,8 @@ const CheckOutComponent = () => {
                 type="text"
                 placeholder="12/99"
                 style={{ width: "7em" }}
-                maxLength={4}
-                minLength={4}
+                maxLength={5}
+                minLength={5}
                 value={cardDate}
                 onChange={(e) => setCardDate(e.target.value)}
               ></Form.Control>
@@ -105,7 +105,11 @@ const CheckOutComponent = () => {
               ></Form.Control>
             </Form.Group>
           </div>
-          <Button type="submit" onClick={handleShow} className="mt-2">
+          <Button
+            type="submit"
+            onClick={handleShow}
+            className="mt-2 btn-warning"
+          >
             Conferma e Paga
           </Button>
         </Form>
@@ -117,10 +121,10 @@ const CheckOutComponent = () => {
             <p>Stiamo preparando il tuo ordine</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button className="btn-warning" onClick={handleClose}>
               Chiudi
             </Button>
-            <Button variant="primary" onClick={returnHome}>
+            <Button onClick={returnHome} className="backgroundRed">
               Torna a HomePage
             </Button>
           </Modal.Footer>
