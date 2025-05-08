@@ -16,14 +16,28 @@ const FooterComponent = () => {
       </div>
       <div className="container-fluid">
         <div className="row pt-4 d-flex justify-content-evenly text-center">
-          <div className="col-6 col-md-auto">FAQ</div>
-          <div className="col-6 col-md-auto">Contattaci</div>
-          <div className="col-6 col-md-auto">La tua opinione conta</div>
-          <div className="col-6 col-md-auto">Regolamenti</div>
-          <div className="col-6 col-md-auto">Privacy</div>
-          <div className="col-6 col-md-auto">Cookies</div>
-          <div className="col-6 col-md-auto">Termini e Condizioni</div>
-          <div className="col-6 col-md-auto">Invia CV</div>
+          <div className="col-6 col-md-auto footerbtn rounded-pill">FAQ</div>
+          <div className="col-6 col-md-auto footerbtn rounded-pill">
+            Contattaci
+          </div>
+          <div className="col-6 col-md-auto footerbtn rounded-pill">
+            La tua opinione conta
+          </div>
+          <div className="col-6 col-md-auto footerbtn rounded-pill">
+            Regolamenti
+          </div>
+          <div className="col-6 col-md-auto footerbtn rounded-pill">
+            Privacy
+          </div>
+          <div className="col-6 col-md-auto footerbtn rounded-pill">
+            Cookies
+          </div>
+          <div className="col-6 col-md-auto footerbtn rounded-pill">
+            Termini e Condizioni
+          </div>
+          <div className="col-6 col-md-auto footerbtn rounded-pill">
+            Invia CV
+          </div>
         </div>
       </div>
       <p className="text-center py-4">
