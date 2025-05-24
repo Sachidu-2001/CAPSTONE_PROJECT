@@ -17,19 +17,6 @@ const ProductsList = () => {
       <Row>
         <Col xs={12} md={2}>
           <Link
-            to="menu"
-            className={
-              location.pathname.includes("menu")
-                ? "nav-link active"
-                : "nav-link"
-            }
-          >
-            Menu
-            <img src={Prdt2} style={{ width: "5rem" }}></img>
-          </Link>
-        </Col>
-        <Col xs={12} md={2}>
-          <Link
             to="panini"
             className={
               location.pathname.includes("panini")
@@ -41,7 +28,6 @@ const ProductsList = () => {
             <img src={Prdt1} style={{ width: "5rem" }}></img>
           </Link>
         </Col>
-
         <Col sm={2}>
           <Link
             to="bevande"
@@ -57,20 +43,6 @@ const ProductsList = () => {
         </Col>
         <Col xs={12} md={2}>
           <Link
-            to="gelati"
-            className={
-              location.pathname.includes("gelati")
-                ? "nav-link active"
-                : "nav-link"
-            }
-          >
-            Gelati
-            <img src={Prdt4} style={{ width: "5rem" }}></img>
-          </Link>
-        </Col>
-
-        <Col xs={12} md={2}>
-          <Link
             to="patatine"
             className={
               location.pathname.includes("patatine")
@@ -84,6 +56,19 @@ const ProductsList = () => {
         </Col>
         <Col xs={12} md={2}>
           <Link
+            to="menu"
+            className={
+              location.pathname.includes("menu")
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            Menu
+            <img src={Prdt2} style={{ width: "5rem" }}></img>
+          </Link>
+        </Col>
+        <Col xs={12} md={2}>
+          <Link
             to="salse"
             className={
               location.pathname.includes("salse")
@@ -93,6 +78,19 @@ const ProductsList = () => {
           >
             Salse
             <img src={Prdt6} style={{ width: "5rem" }}></img>
+          </Link>
+        </Col>
+        <Col xs={12} md={2}>
+          <Link
+            to="gelati"
+            className={
+              location.pathname.includes("gelati")
+                ? "nav-link active"
+                : "nav-link"
+            }
+          >
+            Gelati
+            <img src={Prdt4} style={{ width: "5rem" }}></img>
           </Link>
         </Col>
       </Row>

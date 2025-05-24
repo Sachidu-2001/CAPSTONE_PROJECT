@@ -54,7 +54,7 @@ const CheckOutComponent = () => {
                   <img src={e.image} style={{ width: "10em" }} />
                   <div>
                     <p className="h5">{e.name}</p>
-                    <p className="fw-bold h4">{e.price} &euro;</p>
+                    <p className="fw-bold h4">{e.price.toFixed(2)} &euro;</p>
                   </div>
                 </div>
               </Card>
