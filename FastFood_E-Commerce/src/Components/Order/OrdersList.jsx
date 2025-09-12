@@ -15,8 +15,7 @@ const OrderList = () => {
   const { addToCart } = useCart();
 
   //fetch Get
-  const url = `https://mocki.io/v1/4cdaf963-f6f2-406b-9e73-0d9f699b3391`;
-
+  const url = `https://mocki.io/v1/24c9e0af-1e30-4614-8ae3-7d24958977fa`;
   const fetchingProducts = async () => {
     try {
       const response = await fetch(url);
