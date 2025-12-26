@@ -15,7 +15,7 @@ const ProductPanini = () => {
     setShow(true);
   };
 
-  const url = `https://mocki.io/v1/24c9e0af-1e30-4614-8ae3-7d24958977fa`;
+  const url = `https://mocki.io/v1/a521af0c-dccb-473f-875d-d7a3a91627ad`;
   const fetchingProducts = async () => {
     try {
       const response = await fetch(url);

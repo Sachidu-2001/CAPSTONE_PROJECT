@@ -7,11 +7,20 @@ const FooterComponent = () => {
       <div className="pt-4">
         <div className="d-flex justify-content-center fs-3">
           <p className="fw-bold h4 me-2">Seguici su</p>
-
-          <Icon.Instagram className="me-2" />
-          <Icon.Facebook className="me-2" />
-          <Icon.TwitterX className="me-2" />
-          <Icon.Youtube />
+          <div className="d-flex" style={{ padding: "2px" }}>
+            <div>
+              <Icon.Instagram className="me-2"  />
+            </div>
+            <div>
+              <Icon.Facebook className="me-2" />
+            </div>
+            <div>
+              <Icon.TwitterX className="me-2" />
+            </div>
+            <div>
+              <Icon.Youtube />
+            </div>
+          </div>
         </div>
       </div>
       <div className="container-fluid">
